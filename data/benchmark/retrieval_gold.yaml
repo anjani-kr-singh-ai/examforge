@@ -1,0 +1,72 @@
+# Retrieval gold set. Labels come from the actual ICAI documents:
+#   expected_docs     - documents that should supply the context
+#   expected_sections - primary section-heading prefixes (as extracted) that are on-topic
+#   key_phrases       - verbatim phrases a good context must contain (validated against the corpus at
+#                       run time: a phrase missing from the expected docs is reported as a gold problem)
+# A retrieved chunk is relevant if it is from an expected doc AND (in an expected section OR contains a key phrase).
+queries:
+  - id: itc_conditions
+    request: {chapter: Input Tax Credit, topic: Eligibility and conditions for taking ITC, attempt: May 2027}
+    expected_docs: [icai_idt_sm_ch7_itc]
+    expected_sections: ["3 ELIGIBILITY AND CONDITIONS"]
+    key_phrases: ["possession of a tax invoice or debit note"]
+  - id: itc_time_limit
+    request: {chapter: Input Tax Credit, topic: Time limit for availing ITC, attempt: May 2027}
+    expected_docs: [icai_idt_sm_ch7_itc]
+    expected_sections: ["3 ELIGIBILITY AND CONDITIONS"]
+    key_phrases: ["thirtieth day of November", "furnishing of the relevant annual return"]
+  - id: itc_180_days
+    request: {chapter: Input Tax Credit, topic: Reversal for non-payment to supplier, attempt: May 2027}
+    expected_docs: [icai_idt_sm_ch7_itc]
+    expected_sections: ["3 ELIGIBILITY AND CONDITIONS"]
+    key_phrases: ["one hundred and eighty days"]
+  - id: itc_blocked_motor_vehicles
+    request: {chapter: Input Tax Credit, topic: Blocked credits, attempt: May 2027}
+    query: "blocked credit section 17(5) motor vehicles for transportation of persons seating capacity"
+    expected_docs: [icai_idt_sm_ch7_itc]
+    expected_sections: ["4 APPORTIONMENT OF CREDIT & BLOCKED CREDITS"]
+    key_phrases: ["seating capacity of not more than thirteen persons"]
+  - id: itc_depreciation
+    request: {chapter: Input Tax Credit, topic: Eligibility and conditions for taking ITC, attempt: May 2027}
+    query: "ITC not allowed where depreciation claimed on tax component of capital goods section 16(3)"
+    expected_docs: [icai_idt_sm_ch7_itc]
+    expected_sections: ["3 ELIGIBILITY AND CONDITIONS"]
+    key_phrases: ["claimed depreciation on the tax component"]
+  - id: supply_composite_mixed
+    request: {chapter: Supply under GST, topic: Composite and mixed supply, attempt: May 2027}
+    expected_docs: [icai_idt_sm_ch1_supply]
+    expected_sections: ["4 COMPOSITE AND MIXED SUPPLIES"]
+    key_phrases: ["naturally bundled", "principal supply"]
+  - id: supply_without_consideration
+    request: {chapter: Supply under GST, topic: Activities treated as supply without consideration, attempt: May 2027}
+    expected_docs: [icai_idt_sm_ch1_supply]
+    expected_sections: ["3 CONCEPT OF SUPPLY"]
+    key_phrases: ["related persons", "without consideration"]
+  - id: tos_goods
+    request: {chapter: Time of Supply, topic: Time of supply of goods, attempt: May 2027}
+    expected_docs: [icai_idt_sm_ch5_tos]
+    expected_sections: ["3 TIME OF SUPPLY OF GOODS"]
+    key_phrases: ["date of issue of invoice", "last date on which he is required"]
+  - id: tos_rate_change
+    request: {chapter: Time of Supply, topic: Change in rate of tax, attempt: May 2027}
+    expected_docs: [icai_idt_sm_ch5_tos]
+    expected_sections: ["5 CHANGE IN RATE OF TAX"]
+    key_phrases: ["change in rate of tax"]
+  - id: pos_services_domestic
+    request: {chapter: Place of Supply, topic: Place of supply of services domestic, attempt: May 2027}
+    expected_docs: [icai_idt_sm_ch3_pos]
+    expected_sections: ["5 PLACE OF SUPPLY OF SERVICES WHERE"]
+    key_phrases: ["location of the recipient", "location of the supplier"]
+  - id: period_filter_nov2026_itc
+    # Nov 2026 attempt: chapter-7 study material (tagged May/Nov 2027) must be EXCLUDED; RTP/Statutory Update allowed
+    request: {chapter: Input Tax Credit, topic: Eligibility and conditions for taking ITC, attempt: Nov 2026}
+    expected_docs: [icai_idt_su_nov2026, icai_idt_rtp_nov2026]
+    key_phrases: ["input tax credit"]
+  - id: value_of_supply_no_source
+    request: {chapter: Value of Supply, topic: Discounts, attempt: May 2027}
+    expected_docs: []
+    expect_insufficient: true
+  - id: unknown_period
+    request: {chapter: Input Tax Credit, topic: Blocked credits, attempt: Nov 2030}
+    expected_docs: []
+    expect_insufficient: true

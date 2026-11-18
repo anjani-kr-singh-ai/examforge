@@ -1,0 +1,636 @@
+{
+ "k": 6,
+ "n_queries": 13,
+ "gold_problems": [],
+ "methods": {
+  "dense": {
+   "precision_at_k": 0.7878,
+   "hit_rate_at_k": 1.0,
+   "mrr": 0.9242,
+   "fact_recall_at_k": 0.7273,
+   "filter_violations": 0,
+   "traceable_rate": 1.0,
+   "insufficient_handling_rate": 1.0
+  },
+  "lexical": {
+   "precision_at_k": 0.9091,
+   "hit_rate_at_k": 1.0,
+   "mrr": 1.0,
+   "fact_recall_at_k": 0.9091,
+   "filter_violations": 0,
+   "traceable_rate": 1.0,
+   "insufficient_handling_rate": 1.0
+  },
+  "hybrid": {
+   "precision_at_k": 0.8787,
+   "hit_rate_at_k": 1.0,
+   "mrr": 0.9394,
+   "fact_recall_at_k": 0.9091,
+   "filter_violations": 0,
+   "traceable_rate": 1.0,
+   "insufficient_handling_rate": 1.0
+  }
+ },
+ "per_query": [
+  {
+   "id": "itc_conditions",
+   "method": "dense",
+   "precision": 0.5,
+   "hit": true,
+   "rr": 1.0,
+   "fact_recall": 1.0,
+   "filter_violations": 0,
+   "traceable": true,
+   "insufficient_ok": true,
+   "top": [
+    "icai_idt_sm_ch7_itc p35 3 ELIGIBILITY AND CONDITIONS FOR TAKING ",
+    "icai_idt_sm_ch7_itc p101 5 CREDIT IN SPECIAL CIRCUMSTANCES [SECTI",
+    "icai_idt_sm_ch7_itc p49 4 APPORTIONMENT OF CREDIT & BLOCKED CRED"
+   ]
+  },
+  {
+   "id": "itc_time_limit",
+   "method": "dense",
+   "precision": 0.5,
+   "hit": true,
+   "rr": 1.0,
+   "fact_recall": 0.0,
+   "filter_violations": 0,
+   "traceable": true,
+   "insufficient_ok": true,
+   "top": [
+    "icai_idt_sm_ch7_itc p33 3 ELIGIBILITY AND CONDITIONS FOR TAKING ",
+    "icai_idt_sm_ch7_itc p33 3 ELIGIBILITY AND CONDITIONS FOR TAKING ",
+    "icai_idt_sm_ch7_itc p32 3 ELIGIBILITY AND CONDITIONS FOR TAKING "
+   ]
+  },
+  {
+   "id": "itc_180_days",
+   "method": "dense",
+   "precision": 1.0,
+   "hit": true,
+   "rr": 1.0,
+   "fact_recall": 1.0,
+   "filter_violations": 0,
+   "traceable": true,
+   "insufficient_ok": true,
+   "top": [
+    "icai_idt_sm_ch7_itc p15 3 ELIGIBILITY AND CONDITIONS FOR TAKING ",
+    "icai_idt_sm_ch7_itc p29 3 ELIGIBILITY AND CONDITIONS FOR TAKING ",
+    "icai_idt_sm_ch7_itc p15 3 ELIGIBILITY AND CONDITIONS FOR TAKING "
+   ]
+  },
+  {
+   "id": "itc_blocked_motor_vehicles",
+   "method": "dense",
+   "precision": 0.833,
+   "hit": true,
+   "rr": 1.0,
+   "fact_recall": 0.0,
+   "filter_violations": 0,
+   "traceable": true,
+   "insufficient_ok": true,
+   "top": [
+    "icai_idt_sm_ch7_itc p66 4 APPORTIONMENT OF CREDIT & BLOCKED CRED",
+    "icai_idt_sm_ch7_itc p64 4 APPORTIONMENT OF CREDIT & BLOCKED CRED",
+    "icai_idt_sm_ch7_itc p71 4 APPORTIONMENT OF CREDIT & BLOCKED CRED"
+   ]
+  },
+  {
+   "id": "itc_depreciation",
+   "method": "dense",
+   "precision": 0.167,
+   "hit": true,
+   "rr": 0.16666666666666666,
+   "fact_recall": 0.0,
+   "filter_violations": 0,
+   "traceable": true,
+   "insufficient_ok": true,
+   "top": [
+    "icai_idt_sm_ch7_itc p147 7 HOW ITC IS UTILISED STATUTORY PROVISIO",
+    "icai_idt_sm_ch7_itc p153 7 HOW ITC IS UTILISED STATUTORY PROVISIO",
+    "icai_idt_sm_ch7_itc p104 5 CREDIT IN SPECIAL CIRCUMSTANCES [SECTI"
+   ]
+  },
+  {
+   "id": "supply_composite_mixed",
+   "method": "dense",
+   "precision": 1.0,
+   "hit": true,
+   "rr": 1.0,
+   "fact_recall": 1.0,
+   "filter_violations": 0,
+   "traceable": true,
+   "insufficient_ok": true,
+   "top": [
+    "icai_idt_sm_ch1_supply p108 4 COMPOSITE AND MIXED SUPPLIES [SECTION ",
+    "icai_idt_sm_ch1_supply p133 4 COMPOSITE AND MIXED SUPPLIES [SECTION ",
+    "icai_idt_sm_ch1_supply p109 4 COMPOSITE AND MIXED SUPPLIES [SECTION "
+   ]
+  },
+  {
+   "id": "supply_without_consideration",
+   "method": "dense",
+   "precision": 1.0,
+   "hit": true,
+   "rr": 1.0,
+   "fact_recall": 1.0,
+   "filter_violations": 0,
+   "traceable": true,
+   "insufficient_ok": true,
+   "top": [
+    "icai_idt_sm_ch1_supply p116 4 COMPOSITE AND MIXED SUPPLIES [SECTION ",
+    "icai_idt_sm_ch1_supply p37 3 CONCEPT OF SUPPLY [SECTION 7 OF THE CG",
+    "icai_idt_sm_ch1_supply p11 3 CONCEPT OF SUPPLY [SECTION 7 OF THE CG"
+   ]
+  },
+  {
+   "id": "tos_goods",
+   "method": "dense",
+   "precision": 0.833,
+   "hit": true,
+   "rr": 1.0,
+   "fact_recall": 1.0,
+   "filter_violations": 0,
+   "traceable": true,
+   "insufficient_ok": true,
+   "top": [
+    "icai_idt_sm_ch5_tos p12 3 TIME OF SUPPLY OF GOODS [SECTION 12] >",
+    "icai_idt_sm_ch5_tos p7 3 TIME OF SUPPLY OF GOODS [SECTION 12]",
+    "icai_idt_sm_ch5_tos p27 4 TIME OF SUPPLY OF SERVICES [SECTION 13"
+   ]
+  },
+  {
+   "id": "tos_rate_change",
+   "method": "dense",
+   "precision": 1.0,
+   "hit": true,
+   "rr": 1.0,
+   "fact_recall": 1.0,
+   "filter_violations": 0,
+   "traceable": true,
+   "insufficient_ok": true,
+   "top": [
+    "icai_idt_sm_ch5_tos p41 5 CHANGE IN RATE OF TAX IN RESPECT OF SU",
+    "icai_idt_sm_ch5_tos p43 5 CHANGE IN RATE OF TAX IN RESPECT OF SU",
+    "icai_idt_sm_ch5_tos p56 5 CHANGE IN RATE OF TAX IN RESPECT OF SU"
+   ]
+  },
+  {
+   "id": "pos_services_domestic",
+   "method": "dense",
+   "precision": 0.833,
+   "hit": true,
+   "rr": 1.0,
+   "fact_recall": 1.0,
+   "filter_violations": 0,
+   "traceable": true,
+   "insufficient_ok": true,
+   "top": [
+    "icai_idt_sm_ch3_pos p64 6 PLACE OF SUPPLY OF SERVICES WHERE LOCA",
+    "icai_idt_sm_ch3_pos p88 7 CLARIFICATIONS ON PLACE OF SUPPLY",
+    "icai_idt_sm_ch3_pos p69 6 PLACE OF SUPPLY OF SERVICES WHERE LOCA"
+   ]
+  },
+  {
+   "id": "period_filter_nov2026_itc",
+   "method": "dense",
+   "precision": 1.0,
+   "hit": true,
+   "rr": 1.0,
+   "fact_recall": 1.0,
+   "filter_violations": 0,
+   "traceable": true,
+   "insufficient_ok": true,
+   "top": [
+    "icai_idt_su_nov2026 p17  > INPUT TAX CREDIT",
+    "icai_idt_rtp_nov2026 p27 Question 15",
+    "icai_idt_su_nov2026 p18  > INPUT TAX CREDIT"
+   ]
+  },
+  {
+   "id": "value_of_supply_no_source",
+   "method": "dense",
+   "precision": null,
+   "hit": null,
+   "rr": null,
+   "fact_recall": null,
+   "filter_violations": 0,
+   "traceable": true,
+   "insufficient_ok": true,
+   "top": []
+  },
+  {
+   "id": "unknown_period",
+   "method": "dense",
+   "precision": null,
+   "hit": null,
+   "rr": null,
+   "fact_recall": null,
+   "filter_violations": 0,
+   "traceable": true,
+   "insufficient_ok": true,
+   "top": []
+  },
+  {
+   "id": "itc_conditions",
+   "method": "lexical",
+   "precision": 1.0,
+   "hit": true,
+   "rr": 1.0,
+   "fact_recall": 1.0,
+   "filter_violations": 0,
+   "traceable": true,
+   "insufficient_ok": true,
+   "top": [
+    "icai_idt_sm_ch7_itc p10 3 ELIGIBILITY AND CONDITIONS FOR TAKING ",
+    "icai_idt_sm_ch7_itc p18 3 ELIGIBILITY AND CONDITIONS FOR TAKING ",
+    "icai_idt_sm_ch7_itc p35 3 ELIGIBILITY AND CONDITIONS FOR TAKING "
+   ]
+  },
+  {
+   "id": "itc_time_limit",
+   "method": "lexical",
+   "precision": 0.833,
+   "hit": true,
+   "rr": 1.0,
+   "fact_recall": 0.0,
+   "filter_violations": 0,
+   "traceable": true,
+   "insufficient_ok": true,
+   "top": [
+    "icai_idt_sm_ch7_itc p32 3 ELIGIBILITY AND CONDITIONS FOR TAKING ",
+    "icai_idt_sm_ch7_itc p33 3 ELIGIBILITY AND CONDITIONS FOR TAKING ",
+    "icai_idt_sm_ch7_itc p33 3 ELIGIBILITY AND CONDITIONS FOR TAKING "
+   ]
+  },
+  {
+   "id": "itc_180_days",
+   "method": "lexical",
+   "precision": 0.667,
+   "hit": true,
+   "rr": 1.0,
+   "fact_recall": 1.0,
+   "filter_violations": 0,
+   "traceable": true,
+   "insufficient_ok": true,
+   "top": [
+    "icai_idt_sm_ch7_itc p29 3 ELIGIBILITY AND CONDITIONS FOR TAKING ",
+    "icai_idt_sm_ch7_itc p28 3 ELIGIBILITY AND CONDITIONS FOR TAKING ",
+    "icai_idt_sm_ch7_itc p15 3 ELIGIBILITY AND CONDITIONS FOR TAKING "
+   ]
+  },
+  {
+   "id": "itc_blocked_motor_vehicles",
+   "method": "lexical",
+   "precision": 1.0,
+   "hit": true,
+   "rr": 1.0,
+   "fact_recall": 1.0,
+   "filter_violations": 0,
+   "traceable": true,
+   "insufficient_ok": true,
+   "top": [
+    "icai_idt_sm_ch7_itc p66 4 APPORTIONMENT OF CREDIT & BLOCKED CRED",
+    "icai_idt_sm_ch7_itc p71 4 APPORTIONMENT OF CREDIT & BLOCKED CRED",
+    "icai_idt_sm_ch7_itc p36 4 APPORTIONMENT OF CREDIT & BLOCKED CRED"
+   ]
+  },
+  {
+   "id": "itc_depreciation",
+   "method": "lexical",
+   "precision": 0.5,
+   "hit": true,
+   "rr": 1.0,
+   "fact_recall": 1.0,
+   "filter_violations": 0,
+   "traceable": true,
+   "insufficient_ok": true,
+   "top": [
+    "icai_idt_sm_ch7_itc p30 3 ELIGIBILITY AND CONDITIONS FOR TAKING ",
+    "icai_idt_sm_ch7_itc p153 7 HOW ITC IS UTILISED STATUTORY PROVISIO",
+    "icai_idt_sm_ch7_itc p145 7 HOW ITC IS UTILISED STATUTORY PROVISIO"
+   ]
+  },
+  {
+   "id": "supply_composite_mixed",
+   "method": "lexical",
+   "precision": 1.0,
+   "hit": true,
+   "rr": 1.0,
+   "fact_recall": 1.0,
+   "filter_violations": 0,
+   "traceable": true,
+   "insufficient_ok": true,
+   "top": [
+    "icai_idt_sm_ch1_supply p108 4 COMPOSITE AND MIXED SUPPLIES [SECTION ",
+    "icai_idt_sm_ch1_supply p114 4 COMPOSITE AND MIXED SUPPLIES [SECTION ",
+    "icai_idt_sm_ch1_supply p125 4 COMPOSITE AND MIXED SUPPLIES [SECTION "
+   ]
+  },
+  {
+   "id": "supply_without_consideration",
+   "method": "lexical",
+   "precision": 1.0,
+   "hit": true,
+   "rr": 1.0,
+   "fact_recall": 1.0,
+   "filter_violations": 0,
+   "traceable": true,
+   "insufficient_ok": true,
+   "top": [
+    "icai_idt_sm_ch1_supply p117 4 COMPOSITE AND MIXED SUPPLIES [SECTION ",
+    "icai_idt_sm_ch1_supply p37 3 CONCEPT OF SUPPLY [SECTION 7 OF THE CG",
+    "icai_idt_sm_ch1_supply p116 4 COMPOSITE AND MIXED SUPPLIES [SECTION "
+   ]
+  },
+  {
+   "id": "tos_goods",
+   "method": "lexical",
+   "precision": 1.0,
+   "hit": true,
+   "rr": 1.0,
+   "fact_recall": 1.0,
+   "filter_violations": 0,
+   "traceable": true,
+   "insufficient_ok": true,
+   "top": [
+    "icai_idt_sm_ch5_tos p7 3 TIME OF SUPPLY OF GOODS [SECTION 12]",
+    "icai_idt_sm_ch5_tos p21 3 TIME OF SUPPLY OF GOODS [SECTION 12] >",
+    "icai_idt_sm_ch5_tos p19 3 TIME OF SUPPLY OF GOODS [SECTION 12] >"
+   ]
+  },
+  {
+   "id": "tos_rate_change",
+   "method": "lexical",
+   "precision": 1.0,
+   "hit": true,
+   "rr": 1.0,
+   "fact_recall": 1.0,
+   "filter_violations": 0,
+   "traceable": true,
+   "insufficient_ok": true,
+   "top": [
+    "icai_idt_sm_ch5_tos p41 5 CHANGE IN RATE OF TAX IN RESPECT OF SU",
+    "icai_idt_sm_ch5_tos p41 5 CHANGE IN RATE OF TAX IN RESPECT OF SU",
+    "icai_idt_sm_ch5_tos p59 5 CHANGE IN RATE OF TAX IN RESPECT OF SU"
+   ]
+  },
+  {
+   "id": "pos_services_domestic",
+   "method": "lexical",
+   "precision": 1.0,
+   "hit": true,
+   "rr": 1.0,
+   "fact_recall": 1.0,
+   "filter_violations": 0,
+   "traceable": true,
+   "insufficient_ok": true,
+   "top": [
+    "icai_idt_sm_ch3_pos p64 6 PLACE OF SUPPLY OF SERVICES WHERE LOCA",
+    "icai_idt_sm_ch3_pos p69 6 PLACE OF SUPPLY OF SERVICES WHERE LOCA",
+    "icai_idt_sm_ch3_pos p28 5 PLACE OF SUPPLY OF SERVICES WHERE > ST"
+   ]
+  },
+  {
+   "id": "period_filter_nov2026_itc",
+   "method": "lexical",
+   "precision": 1.0,
+   "hit": true,
+   "rr": 1.0,
+   "fact_recall": 1.0,
+   "filter_violations": 0,
+   "traceable": true,
+   "insufficient_ok": true,
+   "top": [
+    "icai_idt_rtp_nov2026 p27 Question 15",
+    "icai_idt_su_nov2026 p17  > INPUT TAX CREDIT",
+    "icai_idt_su_nov2026 p12  > VALUE OF SUPPLY"
+   ]
+  },
+  {
+   "id": "value_of_supply_no_source",
+   "method": "lexical",
+   "precision": null,
+   "hit": null,
+   "rr": null,
+   "fact_recall": null,
+   "filter_violations": 0,
+   "traceable": true,
+   "insufficient_ok": true,
+   "top": []
+  },
+  {
+   "id": "unknown_period",
+   "method": "lexical",
+   "precision": null,
+   "hit": null,
+   "rr": null,
+   "fact_recall": null,
+   "filter_violations": 0,
+   "traceable": true,
+   "insufficient_ok": true,
+   "top": []
+  },
+  {
+   "id": "itc_conditions",
+   "method": "hybrid",
+   "precision": 0.833,
+   "hit": true,
+   "rr": 1.0,
+   "fact_recall": 1.0,
+   "filter_violations": 0,
+   "traceable": true,
+   "insufficient_ok": true,
+   "top": [
+    "icai_idt_sm_ch7_itc p35 3 ELIGIBILITY AND CONDITIONS FOR TAKING ",
+    "icai_idt_sm_ch7_itc p10 3 ELIGIBILITY AND CONDITIONS FOR TAKING ",
+    "icai_idt_sm_ch7_itc p16 3 ELIGIBILITY AND CONDITIONS FOR TAKING "
+   ]
+  },
+  {
+   "id": "itc_time_limit",
+   "method": "hybrid",
+   "precision": 0.667,
+   "hit": true,
+   "rr": 1.0,
+   "fact_recall": 1.0,
+   "filter_violations": 0,
+   "traceable": true,
+   "insufficient_ok": true,
+   "top": [
+    "icai_idt_sm_ch7_itc p33 3 ELIGIBILITY AND CONDITIONS FOR TAKING ",
+    "icai_idt_sm_ch7_itc p32 3 ELIGIBILITY AND CONDITIONS FOR TAKING ",
+    "icai_idt_sm_ch7_itc p33 3 ELIGIBILITY AND CONDITIONS FOR TAKING "
+   ]
+  },
+  {
+   "id": "itc_180_days",
+   "method": "hybrid",
+   "precision": 1.0,
+   "hit": true,
+   "rr": 1.0,
+   "fact_recall": 1.0,
+   "filter_violations": 0,
+   "traceable": true,
+   "insufficient_ok": true,
+   "top": [
+    "icai_idt_sm_ch7_itc p29 3 ELIGIBILITY AND CONDITIONS FOR TAKING ",
+    "icai_idt_sm_ch7_itc p15 3 ELIGIBILITY AND CONDITIONS FOR TAKING ",
+    "icai_idt_sm_ch7_itc p15 3 ELIGIBILITY AND CONDITIONS FOR TAKING "
+   ]
+  },
+  {
+   "id": "itc_blocked_motor_vehicles",
+   "method": "hybrid",
+   "precision": 1.0,
+   "hit": true,
+   "rr": 1.0,
+   "fact_recall": 0.0,
+   "filter_violations": 0,
+   "traceable": true,
+   "insufficient_ok": true,
+   "top": [
+    "icai_idt_sm_ch7_itc p66 4 APPORTIONMENT OF CREDIT & BLOCKED CRED",
+    "icai_idt_sm_ch7_itc p71 4 APPORTIONMENT OF CREDIT & BLOCKED CRED",
+    "icai_idt_sm_ch7_itc p69 4 APPORTIONMENT OF CREDIT & BLOCKED CRED"
+   ]
+  },
+  {
+   "id": "itc_depreciation",
+   "method": "hybrid",
+   "precision": 0.333,
+   "hit": true,
+   "rr": 0.3333333333333333,
+   "fact_recall": 1.0,
+   "filter_violations": 0,
+   "traceable": true,
+   "insufficient_ok": true,
+   "top": [
+    "icai_idt_sm_ch7_itc p153 7 HOW ITC IS UTILISED STATUTORY PROVISIO",
+    "icai_idt_sm_ch7_itc p147 7 HOW ITC IS UTILISED STATUTORY PROVISIO",
+    "icai_idt_sm_ch7_itc p35 3 ELIGIBILITY AND CONDITIONS FOR TAKING "
+   ]
+  },
+  {
+   "id": "supply_composite_mixed",
+   "method": "hybrid",
+   "precision": 1.0,
+   "hit": true,
+   "rr": 1.0,
+   "fact_recall": 1.0,
+   "filter_violations": 0,
+   "traceable": true,
+   "insufficient_ok": true,
+   "top": [
+    "icai_idt_sm_ch1_supply p108 4 COMPOSITE AND MIXED SUPPLIES [SECTION ",
+    "icai_idt_sm_ch1_supply p114 4 COMPOSITE AND MIXED SUPPLIES [SECTION ",
+    "icai_idt_sm_ch1_supply p109 4 COMPOSITE AND MIXED SUPPLIES [SECTION "
+   ]
+  },
+  {
+   "id": "supply_without_consideration",
+   "method": "hybrid",
+   "precision": 1.0,
+   "hit": true,
+   "rr": 1.0,
+   "fact_recall": 1.0,
+   "filter_violations": 0,
+   "traceable": true,
+   "insufficient_ok": true,
+   "top": [
+    "icai_idt_sm_ch1_supply p116 4 COMPOSITE AND MIXED SUPPLIES [SECTION ",
+    "icai_idt_sm_ch1_supply p37 3 CONCEPT OF SUPPLY [SECTION 7 OF THE CG",
+    "icai_idt_sm_ch1_supply p117 4 COMPOSITE AND MIXED SUPPLIES [SECTION "
+   ]
+  },
+  {
+   "id": "tos_goods",
+   "method": "hybrid",
+   "precision": 1.0,
+   "hit": true,
+   "rr": 1.0,
+   "fact_recall": 1.0,
+   "filter_violations": 0,
+   "traceable": true,
+   "insufficient_ok": true,
+   "top": [
+    "icai_idt_sm_ch5_tos p7 3 TIME OF SUPPLY OF GOODS [SECTION 12]",
+    "icai_idt_sm_ch5_tos p42 5 CHANGE IN RATE OF TAX IN RESPECT OF SU",
+    "icai_idt_sm_ch5_tos p19 3 TIME OF SUPPLY OF GOODS [SECTION 12] >"
+   ]
+  },
+  {
+   "id": "tos_rate_change",
+   "method": "hybrid",
+   "precision": 1.0,
+   "hit": true,
+   "rr": 1.0,
+   "fact_recall": 1.0,
+   "filter_violations": 0,
+   "traceable": true,
+   "insufficient_ok": true,
+   "top": [
+    "icai_idt_sm_ch5_tos p41 5 CHANGE IN RATE OF TAX IN RESPECT OF SU",
+    "icai_idt_sm_ch5_tos p41 5 CHANGE IN RATE OF TAX IN RESPECT OF SU",
+    "icai_idt_sm_ch5_tos p43 5 CHANGE IN RATE OF TAX IN RESPECT OF SU"
+   ]
+  },
+  {
+   "id": "pos_services_domestic",
+   "method": "hybrid",
+   "precision": 0.833,
+   "hit": true,
+   "rr": 1.0,
+   "fact_recall": 1.0,
+   "filter_violations": 0,
+   "traceable": true,
+   "insufficient_ok": true,
+   "top": [
+    "icai_idt_sm_ch3_pos p64 6 PLACE OF SUPPLY OF SERVICES WHERE LOCA",
+    "icai_idt_sm_ch3_pos p69 6 PLACE OF SUPPLY OF SERVICES WHERE LOCA",
+    "icai_idt_sm_ch3_pos p22 5 PLACE OF SUPPLY OF SERVICES WHERE"
+   ]
+  },
+  {
+   "id": "period_filter_nov2026_itc",
+   "method": "hybrid",
+   "precision": 1.0,
+   "hit": true,
+   "rr": 1.0,
+   "fact_recall": 1.0,
+   "filter_violations": 0,
+   "traceable": true,
+   "insufficient_ok": true,
+   "top": [
+    "icai_idt_su_nov2026 p17  > INPUT TAX CREDIT",
+    "icai_idt_rtp_nov2026 p27 Question 15",
+    "icai_idt_su_nov2026 p18  > INPUT TAX CREDIT"
+   ]
+  },
+  {
+   "id": "value_of_supply_no_source",
+   "method": "hybrid",
+   "precision": null,
+   "hit": null,
+   "rr": null,
+   "fact_recall": null,
+   "filter_violations": 0,
+   "traceable": true,
+   "insufficient_ok": true,
+   "top": []
+  },
+  {
+   "id": "unknown_period",
+   "method": "hybrid",
+   "precision": null,
+   "hit": null,
+   "rr": null,
+   "fact_recall": null,
+   "filter_violations": 0,
+   "traceable": true,
+   "insufficient_ok": true,
+   "top": []
+  }
+ ]
+}

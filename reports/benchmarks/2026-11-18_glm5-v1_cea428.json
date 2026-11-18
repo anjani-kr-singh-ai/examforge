@@ -1,0 +1,1069 @@
+{
+ "run_id": "2026-11-18_glm5-v1_cea428",
+ "label": "glm5-v1",
+ "timestamp": "2026-11-18T12:23:30+00:00",
+ "provider": "bedrock",
+ "model": "zai.glm-5",
+ "reviewer_model": "qwen.qwen3-235b-a22b-2507-v1:0",
+ "mock": false,
+ "prompt_versions": {
+  "question_setter": "v1",
+  "distractor_generator": "v1",
+  "reviser": "v1",
+  "critical_examiner": "v1",
+  "evidence_verifier": "v1",
+  "difficulty_reviewer": "v1",
+  "judge": "v1"
+ },
+ "params": {
+  "effort": "high",
+  "top_k": 6,
+  "chunk_size": 350,
+  "max_revisions": 1,
+  "max_retries": 3,
+  "duplicate_threshold": 0.92
+ },
+ "cases": [
+  {
+   "id": "itc_eligibility_easy_single",
+   "status": "ok",
+   "message": "",
+   "n_requested": 2,
+   "n_generated": 2,
+   "expect_insufficient": false,
+   "insufficient_ok": true,
+   "llm_calls": 20,
+   "retries": 0,
+   "latency_s": 131.26,
+   "input_tokens": 66030,
+   "output_tokens": 12416,
+   "failed_calls": 0
+  },
+  {
+   "id": "itc_blocked_medium_application",
+   "status": "ok",
+   "message": "",
+   "n_requested": 2,
+   "n_generated": 2,
+   "expect_insufficient": false,
+   "insufficient_ok": true,
+   "llm_calls": 15,
+   "retries": 0,
+   "latency_s": 94.65,
+   "input_tokens": 54728,
+   "output_tokens": 10190,
+   "failed_calls": 0
+  },
+  {
+   "id": "itc_timelimit_hard_case",
+   "status": "ok",
+   "message": "",
+   "n_requested": 2,
+   "n_generated": 2,
+   "expect_insufficient": false,
+   "insufficient_ok": true,
+   "llm_calls": 20,
+   "retries": 0,
+   "latency_s": 177.82,
+   "input_tokens": 74615,
+   "output_tokens": 22129,
+   "failed_calls": 0
+  },
+  {
+   "id": "itc_apportionment_medium_multiple",
+   "status": "ok",
+   "message": "",
+   "n_requested": 2,
+   "n_generated": 2,
+   "expect_insufficient": false,
+   "insufficient_ok": true,
+   "llm_calls": 10,
+   "retries": 0,
+   "latency_s": 53.11,
+   "input_tokens": 34298,
+   "output_tokens": 5975,
+   "failed_calls": 0
+  },
+  {
+   "id": "supply_composite_medium_application",
+   "status": "ok",
+   "message": "",
+   "n_requested": 2,
+   "n_generated": 2,
+   "expect_insufficient": false,
+   "insufficient_ok": true,
+   "llm_calls": 20,
+   "retries": 1,
+   "latency_s": 108.22,
+   "input_tokens": 66379,
+   "output_tokens": 12607,
+   "failed_calls": 0
+  },
+  {
+   "id": "supply_schedule1_hard_multiconcept",
+   "status": "ok",
+   "message": "",
+   "n_requested": 2,
+   "n_generated": 2,
+   "expect_insufficient": false,
+   "insufficient_ok": true,
+   "llm_calls": 15,
+   "retries": 0,
+   "latency_s": 88.32,
+   "input_tokens": 57003,
+   "output_tokens": 10620,
+   "failed_calls": 0
+  },
+  {
+   "id": "tos_goods_easy_multiple",
+   "status": "ok",
+   "message": "",
+   "n_requested": 2,
+   "n_generated": 2,
+   "expect_insufficient": false,
+   "insufficient_ok": true,
+   "llm_calls": 20,
+   "retries": 0,
+   "latency_s": 112.83,
+   "input_tokens": 69605,
+   "output_tokens": 12416,
+   "failed_calls": 0
+  },
+  {
+   "id": "pos_services_hard_case",
+   "status": "ok",
+   "message": "",
+   "n_requested": 2,
+   "n_generated": 2,
+   "expect_insufficient": false,
+   "insufficient_ok": true,
+   "llm_calls": 16,
+   "retries": 1,
+   "latency_s": 122.49,
+   "input_tokens": 58149,
+   "output_tokens": 14516,
+   "failed_calls": 0
+  },
+  {
+   "id": "itc_amendment_mode",
+   "status": "ok",
+   "message": "",
+   "n_requested": 1,
+   "n_generated": 1,
+   "expect_insufficient": false,
+   "insufficient_ok": true,
+   "llm_calls": 11,
+   "retries": 0,
+   "latency_s": 54.63,
+   "input_tokens": 41921,
+   "output_tokens": 6487,
+   "failed_calls": 0
+  },
+  {
+   "id": "value_no_sources",
+   "status": "insufficient_evidence",
+   "message": "No indexed source documents for chapter 'Value of Supply' applicable to May 2027. Available periods: ['May 2025', 'May 2026', 'May 2027', 'Nov 2025', 'Nov 2026', 'Nov 2027'].",
+   "n_requested": 2,
+   "n_generated": 0,
+   "expect_insufficient": true,
+   "insufficient_ok": true
+  },
+  {
+   "id": "wrong_period",
+   "status": "insufficient_evidence",
+   "message": "No indexed source documents for chapter 'Input Tax Credit' applicable to Nov 2030. Available periods: ['May 2025', 'May 2026', 'May 2027', 'Nov 2025', 'Nov 2026', 'Nov 2027'].",
+   "n_requested": 2,
+   "n_generated": 0,
+   "expect_insufficient": true,
+   "insufficient_ok": true
+  }
+ ],
+ "metrics": {
+  "n_cases": 11,
+  "n_questions": 17,
+  "yield_rate": 1.0,
+  "valid_output_rate": 1.0,
+  "first_pass_valid_rate": 0.9412,
+  "quote_grounding_mean": 0.9706,
+  "evidence_supported_rate": 1.0,
+  "answer_agreement_rate": 0.8824,
+  "difficulty_match_rate": 0.7647,
+  "passed_for_review_rate": 0.5882,
+  "rejected_rate": 0.0,
+  "duplicate_rate": 0.0,
+  "revision_rate": 0.7647,
+  "insufficient_detection_rate": 1.0,
+  "judge_means": {
+   "relevance": 5.0,
+   "factual_correctness": 4.8824,
+   "clarity": 5.0,
+   "difficulty_fit": 5.0,
+   "distractor_quality": 5.0,
+   "answer_explanation_consistency": 5.0
+  },
+  "llm_calls": 147,
+  "failed_calls": 0,
+  "retry_rate": 0.0136,
+  "latency_s_total": 943.3,
+  "latency_s_per_question": 55.5,
+  "input_tokens": 522728,
+  "output_tokens": 107356,
+  "est_cost_usd": 0.4353,
+  "status_counts": {
+   "NEEDS_REVIEW": 17
+  },
+  "verdict_counts": {
+   "passed_for_human_review": 10,
+   "needs_revision": 7
+  }
+ },
+ "questions": [
+  {
+   "case": "itc_eligibility_easy_single",
+   "id": "q_5cf43a4c7a",
+   "status": "NEEDS_REVIEW",
+   "verdict": "passed_for_human_review",
+   "question": "As per Section 16(1) of the CGST Act, 2017, a registered person is entitled to take credit of input tax charged on any supply of goods or services or both to him subject to certain conditions. Which of the following is a fundamental condition regarding the use of such goods or services for claiming Input Tax Credit (ITC)?",
+   "options": {
+    "A": "The registered person must have actually paid the tax charged on the supply to the supplier before claiming the credit.",
+    "B": "The goods or services or both must be used or intended to be used in the course or furtherance of his business.",
+    "C": "The goods or services or both must be used or intended to be used for personal consumption of the registered person.",
+    "D": "The goods or services or both must be used or intended to be used exclusively for the manufacture of capital goods."
+   },
+   "key": [
+    "B"
+   ],
+   "deterministic_passed": true,
+   "quote_grounding": 1.0,
+   "evidence_status": "supported",
+   "answer_agreement": true,
+   "requested_difficulty": "Easy",
+   "estimated_difficulty": "Easy",
+   "duplicate_of": null,
+   "reasons": [],
+   "revisions": 1,
+   "judge": {
+    "relevance": 5,
+    "factual_correctness": 5,
+    "clarity": 5,
+    "difficulty_fit": 5,
+    "distractor_quality": 5,
+    "answer_explanation_consistency": 5,
+    "rationale": "The question directly tests the fundamental condition under Section 16(1) regarding business use of inputs for ITC eligibility, which is central to the topic. The correct answer (B) and all distractors are aligned with the statutory text and reference material. The explanation accurately cites Section 16(1) and correctly refutes each wrong option using relevant provisions (e.g., personal use blocked under Section 17(5), no exclusive use for capital goods required). The question requires only one reasoning step—recognition of the statutory language—and fits the 'Easy' level as per the rubric. All distractors are plausible but clearly incorrect upon analysis, and the explanation consistently supports the keyed answer."
+   },
+   "examiner_issues": [
+    {
+     "category": "ambiguity",
+     "severity": "minor",
+     "detail": "Option (A) could be misinterpreted due to the phrase 'actually paid the tax charged on the supply to the supplier'. It is unclear whether this refers to payment of invoice amount (which includes tax) or specifically the tax portion. However, the explanation correctly clarifies that payment is not a condition for eligibility under Section 16(1), only for retention under Section 16(2) via reverse charge mechanism implications. The ambiguity is minor because the statutory text and study material clearly separate eligibility from payment timing."
+    }
+   ]
+  },
+  {
+   "case": "itc_eligibility_easy_single",
+   "id": "q_a2bd007527",
+   "status": "NEEDS_REVIEW",
+   "verdict": "passed_for_human_review",
+   "question": "Mr. A, a registered person, is in possession of a tax invoice for a supply of goods. However, the details of the said invoice have not been furnished by the supplier in the statement of outward supplies. Can Mr. A avail the Input Tax Credit (ITC) on the basis of the tax invoice in his possession?",
+   "options": {
+    "A": "Yes, because possession of a valid tax invoice is the primary condition for availing Input Tax Credit under Section 16(2)(a).",
+    "B": "Yes, because the recipient can claim ITC based on the invoice if the tax has been charged and the goods have been received.",
+    "C": "No, because the recipient has not actually paid the tax amount to the supplier against the said invoice.",
+    "D": "No, because the details of the invoice have not been furnished by the supplier in the statement of outward supplies and communicated to the recipient."
+   },
+   "key": [
+    "D"
+   ],
+   "deterministic_passed": true,
+   "quote_grounding": 0.5,
+   "evidence_status": "supported",
+   "answer_agreement": true,
+   "requested_difficulty": "Easy",
+   "estimated_difficulty": "Medium",
+   "duplicate_of": null,
+   "reasons": [
+    "warning: all_quotes_grounded (1 quote(s) not found in source)",
+    "difficulty: requested Easy, estimated Medium"
+   ],
+   "revisions": 1,
+   "judge": {
+    "relevance": 5,
+    "factual_correctness": 5,
+    "clarity": 5,
+    "difficulty_fit": 5,
+    "distractor_quality": 5,
+    "answer_explanation_consistency": 5,
+    "rationale": "The MCQ directly tests the conditions for availing ITC under Section 16(2), specifically focusing on the requirement that invoice details must be furnished by the supplier in the outward supply statement (Section 16(2)(aa)), which is a core part of the 'Eligibility and conditions for taking ITC' topic. The question is factually accurate, citing the correct statutory provisions (Section 16(2)(a), (aa), and communication under Section 37) as per the reference material [C2]. It is clear and unambiguous, presenting a straightforward scenario with all necessary facts. The difficulty is appropriately Easy, requiring recognition of a single statutory condition (furnishing of invoice details) without complex application. The distractors are well-crafted: (A) and (B) reflect common misconceptions about sufficiency of invoice possession or receipt of goods; (C) introduces an irrelevant condition (payment to supplier), making it plausible but incorrect; all are clearly refuted in the explanation. The answer key (D) is correct, and the explanation precisely justifies it using the statutory text and logic, while correctly identifying why each distractor is wrong, aligning fully with the reference material."
+   },
+   "examiner_issues": [
+    {
+     "category": "ambiguity",
+     "severity": "minor",
+     "detail": "Option (B) could be read as implying that 'tax has been charged' means it is reflected in a valid invoice, which would make it partially aligned with Section 16(2)(a). However, since it fails to mention the furnishing requirement under 16(2)(aa), it remains incorrect. Still, the phrasing 'tax has been charged' is slightly ambiguous — it could be interpreted as tax being levied (correct) or actually paid (incorrect). This minor ambiguity does not create an arguable case but reduces clarity."
+    },
+    {
+     "category": "explanation_inconsistent",
+     "severity": "minor",
+     "detail": "The explanation states that Section 16(2) uses 'and' to connect the conditions — this is accurate, but the explanation could more clearly cite Rule 36(4) or GSTR-2A/3B linkage as operational mechanisms. However, since the reference material supports the legal position without requiring procedural detail, this is only a minor issue."
+    }
+   ]
+  },
+  {
+   "case": "itc_blocked_medium_application",
+   "id": "q_068beb27e6",
+   "status": "NEEDS_REVIEW",
+   "verdict": "needs_revision",
+   "question": "M/s Alpha Ltd., a manufacturing company, availed works contract services for renovation of its factory building. The expenditure for such renovation was not capitalized in the books of account but was treated as revenue expenditure in accordance with the applicable Accounting Standards. Which of the following statements is correct regarding the admissibility of Input Tax Credit (ITC) on the GST paid for such works contract services?",
+   "options": {
+    "A": "ITC is blocked because the factory building is an immovable property other than plant and machinery.",
+    "B": "ITC is allowed since the renovation expenditure is not capitalized in the books of account.",
+    "C": "ITC is blocked because renovation of a factory building amounts to construction of an immovable property other than plant and machinery.",
+    "D": "ITC is allowed only if M/s Alpha Ltd. is in the business of providing works contract services to others."
+   },
+   "key": [
+    "B"
+   ],
+   "deterministic_passed": true,
+   "quote_grounding": 1.0,
+   "evidence_status": "supported",
+   "answer_agreement": true,
+   "requested_difficulty": "Medium",
+   "estimated_difficulty": "Medium",
+   "duplicate_of": null,
+   "reasons": [
+    "warning: no_absolute_word_cue (absolute words only in distractors ['D'])",
+    "examiner major: explanation_inconsistent - The explanation states: 'ITC on works contract services availed for such construction (which is not capitalized) is allowed to all recipients irrespective of their line of business.' While this is correct, the reference material (C1 and C5) supports this. However, the explanation fails to cite the exact source (C5) which explicitly lists 'Where value of WCS is not capitalized' as an exception in the flowchart. The explanation relies on correct law but does not fully align with the structure and emphasis of the reference material, risking misinterpretation if a candidate expects precise textual alignment."
+   ],
+   "revisions": 1,
+   "judge": {
+    "relevance": 5,
+    "factual_correctness": 5,
+    "clarity": 5,
+    "difficulty_fit": 5,
+    "distractor_quality": 5,
+    "answer_explanation_consistency": 5,
+    "rationale": "The question directly addresses 'blocked credits' under Section 17(5)(c) of the CGST Act, specifically focusing on the capitalization criterion for works contract services in the context of renovation — a core aspect of the topic. The key and explanation align perfectly with the reference material (especially [C1], [C3], and [C5]), which clarifies that ITC is not blocked if the renovation expense is not capitalized. The difficulty is Medium, requiring two reasoning steps: understanding the definition of 'construction' and applying the capitalization exception. All distractors are plausible but clearly incorrect upon analysis: (A) ignores the capitalization exception; (C) misapplies the definition by omitting the capitalization qualifier; (D) incorrectly ties eligibility to business line. The explanation correctly justifies (B) and refutes the others, with no contradiction between the key and reasoning."
+   },
+   "examiner_issues": [
+    {
+     "category": "ambiguity",
+     "severity": "minor",
+     "detail": "The phrase 'treated as revenue expenditure in accordance with the applicable Accounting Standards' could raise questions about whether the determination of capitalization is purely an accounting issue or has legal consequences under GST. However, reference material (C3) clarifies that capitalisation depends on Accounting Standards and GAAP, so this is not a material ambiguity."
+    },
+    {
+     "category": "weak_distractor",
+     "severity": "minor",
+     "detail": "Option (D) is a weak distractor with low plausibility (rated 2). It introduces a condition relevant only to sub-contracting scenarios, which is clearly inapplicable here. A prepared candidate would easily eliminate it, reducing the overall quality of the distractors."
+    },
+    {
+     "category": "explanation_inconsistent",
+     "severity": "major",
+     "detail": "The explanation states: 'ITC on works contract services availed for such construction (which is not capitalized) is allowed to all recipients irrespective of their line of business.' While this is correct, the reference material (C1 and C5) supports this. However, the explanation fails to cite the exact source (C5) which explicitly lists 'Where value of WCS is not capitalized' as an exception in the flowchart. The explanation relies on correct law but does not fully align with the structure and emphasis of the reference material, risking misinterpretation if a candidate expects precise textual alignment."
+    }
+   ]
+  },
+  {
+   "case": "itc_blocked_medium_application",
+   "id": "q_cfc29fc230",
+   "status": "NEEDS_REVIEW",
+   "verdict": "passed_for_human_review",
+   "question": "M/s Beta Pvt. Ltd., a textile manufacturer, availed outdoor catering services for running a canteen in its factory premises for the benefit of its employees. The setting up of the canteen is required under the Factories Act, 1948. The company seeks to claim Input Tax Credit (ITC) on the GST paid for these outdoor catering services. Which of the following statements is correct regarding the admissibility of such ITC?",
+   "options": {
+    "A": "ITC is blocked because the outdoor catering service is provided for the personal consumption of employees.",
+    "B": "ITC is allowed since the outdoor catering service is obligatory for the employer to provide under the Factories Act, 1948.",
+    "C": "ITC is allowed only if the outdoor catering service is used for making an outward taxable supply of the same category of services.",
+    "D": "ITC is blocked since outdoor catering services are explicitly mentioned in the blocked credits list under Section 17(5)(b)."
+   },
+   "key": [
+    "B"
+   ],
+   "deterministic_passed": true,
+   "quote_grounding": 1.0,
+   "evidence_status": "supported",
+   "answer_agreement": true,
+   "requested_difficulty": "Medium",
+   "estimated_difficulty": "Medium",
+   "duplicate_of": null,
+   "reasons": [
+    "warning: no_absolute_word_cue (absolute words only in distractors ['C'])"
+   ],
+   "revisions": 0,
+   "judge": {
+    "relevance": 5,
+    "factual_correctness": 5,
+    "clarity": 5,
+    "difficulty_fit": 5,
+    "distractor_quality": 5,
+    "answer_explanation_consistency": 5,
+    "rationale": "The question directly addresses blocked credits under Section 17(5)(b) with a focus on the statutory obligation exception, squarely within the 'Blocked Credits' topic. The key and explanation align precisely with the reference material (C2, C3, C5), particularly Circular No. 172/04/2022 cited in the study material. The scenario is clear and self-contained, requiring two reasoning steps: recognizing outdoor catering as generally blocked and applying the statutory obligation exception. Distractors are plausible but incorrect for nuanced reasons, reflecting common misconceptions. The explanation correctly justifies option B and refutes others based on precise legal reasoning, fully consistent with the key."
+   },
+   "examiner_issues": [
+    {
+     "category": "ambiguity",
+     "severity": "minor",
+     "detail": "The phrase 'outdoor catering services' could be read narrowly (catering from external vendors) or broadly (any non-in-house canteen service). However, the reference material treats it consistently as falling under Section 17(5)(b)(i), so the ambiguity does not affect the legal outcome."
+    },
+    {
+     "category": "explanation_inconsistent",
+     "severity": "minor",
+     "detail": "The explanation cites Circular No. 172/04/2022 as applying the proviso to the 'whole of section 17(5)(b)', but the reference material (C2) only states this without specifying whether it includes clauses (i), (ii), and (iii) equally. While correct in substance, the explanation slightly overreaches by implying uniform application across all sub-clauses without clarifying that the proviso is tied specifically to employee-related blocked credits."
+    }
+   ]
+  },
+  {
+   "case": "itc_timelimit_hard_case",
+   "id": "q_22f99c6b0a",
+   "status": "NEEDS_REVIEW",
+   "verdict": "needs_revision",
+   "question": "Alpha Ltd., a registered person, purchased a machine from Beta Machinery Ltd. for ₹10,00,000 plus GST. The machine was delivered under Invoice No. 101 dated 15th February 2026. Subsequently, Beta Machinery Ltd. performed installation and calibration, raising Debit Note No. DN/05 dated 10th April 2026 for ₹1,00,000 plus GST. Alpha Ltd. filed its annual return for FY 2025-26 on 31st December 2026. Determine the last date by which Alpha Ltd. can avail Input Tax Credit (ITC) on the tax paid on Debit Note No. DN/05.",
+   "options": {
+    "A": "30th November 2027",
+    "B": "31st December 2026",
+    "C": "10th April 2027",
+    "D": "30th November 2026"
+   },
+   "key": [
+    "A"
+   ],
+   "deterministic_passed": true,
+   "quote_grounding": 1.0,
+   "evidence_status": "supported",
+   "answer_agreement": true,
+   "requested_difficulty": "Hard",
+   "estimated_difficulty": "Hard",
+   "duplicate_of": null,
+   "reasons": [
+    "examiner major: ambiguity - The phrase 'pertaining to a financial year' in Section 16(4) and the Study Material could be interpreted differently if not clarified. While [C2] and [C1] state that the date of the debit note governs the relevant financial year, the question assumes this without explicitly confirming whether the addition (installation/calibration) constitutes part of the same supply. If the calibration were deemed a separate service, the analysis might differ. However, the stated assumption that the debit note is 'not a standalone supply but an addition to the value of the original supply' mitigates this — yet the assumption itself is not clearly reflected in the reference material's examples, which may leave room for argument."
+   ],
+   "revisions": 1,
+   "judge": {
+    "relevance": 5,
+    "factual_correctness": 5,
+    "clarity": 5,
+    "difficulty_fit": 5,
+    "distractor_quality": 5,
+    "answer_explanation_consistency": 5,
+    "rationale": "The question precisely targets the topic 'Time limit for availing ITC' under Section 16(4), focusing on the nuanced treatment of debit notes, which aligns with the requested topic and chapter. The factual correctness is high as the explanation correctly cites that the financial year of the debit note (April 2026) determines the time limit, consistent with Study Material references [C2] and [C1]. The clarity is excellent—scenario, assumptions, and key facts are clearly presented. The difficulty is appropriately Hard: it requires understanding the interaction between the debit note rule, the relevant financial year, and the Section 16(4) cutoff, with a realistic scenario containing relevant and irrelevant facts (e.g., annual return filing date for FY 2025-26 is a distractor). Distractors are well-crafted: each incorrect option reflects a common misconception (tying ITC to original invoice, misreading deadlines, or miscalculating timelines). The explanation consistently justifies the correct answer and refutes each distractor based on law and facts, with no contradiction."
+   },
+   "examiner_issues": [
+    {
+     "category": "ambiguity",
+     "severity": "major",
+     "detail": "The phrase 'pertaining to a financial year' in Section 16(4) and the Study Material could be interpreted differently if not clarified. While [C2] and [C1] state that the date of the debit note governs the relevant financial year, the question assumes this without explicitly confirming whether the addition (installation/calibration) constitutes part of the same supply. If the calibration were deemed a separate service, the analysis might differ. However, the stated assumption that the debit note is 'not a standalone supply but an addition to the value of the original supply' mitigates this — yet the assumption itself is not clearly reflected in the reference material's examples, which may leave room for argument."
+    },
+    {
+     "category": "explanation_inconsistent",
+     "severity": "minor",
+     "detail": "The explanation cites that the deadline is 'the earlier of the date of filing the annual return for FY 2026-27 or 30th November 2027', but the question does not provide the date when Alpha Ltd. will file its return for FY 2026-27. Thus, strictly speaking, the correct answer depends on an unknown future event. However, per convention in such questions, when the annual return filing date is not provided, 30th November of the succeeding FY is accepted as the de facto deadline. This is standard practice, so the issue is minor but worth noting."
+    }
+   ]
+  },
+  {
+   "case": "itc_timelimit_hard_case",
+   "id": "q_8a2767fad9",
+   "status": "NEEDS_REVIEW",
+   "verdict": "needs_revision",
+   "question": "Delta Traders, a registered person, had its registration cancelled with effect from 1st August 2025. The cancellation order was subsequently revoked on 20th October 2026. Delta Traders filed all pending returns for the period from the cancellation date to the revocation date on 15th November 2026 (within 30 days of revocation). Delta Traders possesses an invoice dated 1st May 2025 (pertaining to FY 2025-26) for which ITC was not availed before cancellation. Determine the last date for Delta Traders to avail ITC on the invoice dated 1st May 2025.",
+   "options": {
+    "A": "30th November 2026",
+    "B": "1st August 2025",
+    "C": "19th November 2026",
+    "D": "15th November 2026"
+   },
+   "key": [
+    "D"
+   ],
+   "deterministic_passed": true,
+   "quote_grounding": 1.0,
+   "evidence_status": "supported",
+   "answer_agreement": false,
+   "requested_difficulty": "Hard",
+   "estimated_difficulty": "Hard",
+   "duplicate_of": null,
+   "reasons": [
+    "examiner major: ambiguity - The phrase 'filed all pending returns for the period from the cancellation date to the revocation date on 15th November 2026' is ambiguous. It does not specify whether this refers to GSTR-3B or annual returns. The relaxation under Section 16(6) applies specifically to the filing of returns for the gap period (typically GSTR-3B or equivalent), but the term 'pending returns' could be misinterpreted. This creates uncertainty about whether the condition for relaxation is truly met.",
+    "examiner major: incomplete_conditions - The question assumes that 'all pending returns' were filed within 30 days of revocation, but it does not confirm whether these are the specific returns required under Section 16(6) — i.e., the monthly/quarterly returns for the period of cancellation to revocation. The material ([C3]) specifies that the relaxation applies only when 'returns for the period from date of cancellation... till the date of revocation... are filed within 30 days'. Without confirming the type of return, the applicability of the relaxation is uncertain.",
+    "examiner major: explanation_inconsistent - The explanation states that 'the time limit to avail ITC under Section 16(4) is extended to the date of filing of those returns', but the reference material ([C3]) says 'the time limit... is extended till the date of filing return'. The use of singular 'return' in the material suggests that the extension applies upon filing the required return(s) for the lapsed period, but the explanation assumes that filing on 15th Nov automatically sets that date as the deadline. If multiple returns were due and only some were filed by 15th Nov, the logic fails. The explanation oversimplifies and does not address what constitutes compliance.",
+    "blind solver answered ['A'], key is ['D']"
+   ],
+   "revisions": 1,
+   "judge": {
+    "relevance": 5,
+    "factual_correctness": 5,
+    "clarity": 5,
+    "difficulty_fit": 5,
+    "distractor_quality": 5,
+    "answer_explanation_consistency": 5,
+    "rationale": "The question precisely targets the topic 'Time limit for availing ITC' under Section 16(4) and the exception in Section 16(6) for revoked registration, which is explicitly covered in the reference material. The scenario involves multiple reasoning steps: determining the normal ITC deadline, assessing eligibility under the relaxation in Section 16(6), and correctly applying the condition that the original time limit must not have expired at cancellation. The key and explanation align perfectly with the study material (C3, C4), and each distractor represents a plausible but incorrect interpretation (e.g., ignoring the relaxation, misapplying revocation date, or confusing filing deadlines). The explanation clearly justifies the correct answer (D) and refutes others based on statutory nuance, ensuring consistency and high-quality distractors."
+   },
+   "examiner_issues": [
+    {
+     "category": "ambiguity",
+     "severity": "major",
+     "detail": "The phrase 'filed all pending returns for the period from the cancellation date to the revocation date on 15th November 2026' is ambiguous. It does not specify whether this refers to GSTR-3B or annual returns. The relaxation under Section 16(6) applies specifically to the filing of returns for the gap period (typically GSTR-3B or equivalent), but the term 'pending returns' could be misinterpreted. This creates uncertainty about whether the condition for relaxation is truly met."
+    },
+    {
+     "category": "incomplete_conditions",
+     "severity": "major",
+     "detail": "The question assumes that 'all pending returns' were filed within 30 days of revocation, but it does not confirm whether these are the specific returns required under Section 16(6) — i.e., the monthly/quarterly returns for the period of cancellation to revocation. The material ([C3]) specifies that the relaxation applies only when 'returns for the period from date of cancellation... till the date of revocation... are filed within 30 days'. Without confirming the type of return, the applicability of the relaxation is uncertain."
+    },
+    {
+     "category": "explanation_inconsistent",
+     "severity": "major",
+     "detail": "The explanation states that 'the time limit to avail ITC under Section 16(4) is extended to the date of filing of those returns', but the reference material ([C3]) says 'the time limit... is extended till the date of filing return'. The use of singular 'return' in the material suggests that the extension applies upon filing the required return(s) for the lapsed period, but the explanation assumes that filing on 15th Nov automatically sets that date as the deadline. If multiple returns were due and only some were filed by 15th Nov, the logic fails. The explanation oversimplifies and does not address what constitutes compliance."
+    },
+    {
+     "category": "weak_distractor",
+     "severity": "minor",
+     "detail": "Option (B) is weakly tempting (plausibility 3). A well-prepared candidate familiar with Section 16(6) would not seriously consider it. It represents a fundamental misunderstanding of the provision and is less plausible than (A) or (C)."
+    }
+   ]
+  },
+  {
+   "case": "itc_apportionment_medium_multiple",
+   "id": "q_0bb6b90735",
+   "status": "NEEDS_REVIEW",
+   "verdict": "passed_for_human_review",
+   "question": "Which of the following statements regarding the methodology for determination of input tax credit on capital goods under Rule 43 are correct? (select all that apply)",
+   "options": {
+    "A": "The useful life of capital goods used exclusively for non-business purposes or exempt supplies shall be taken as five years from the date of the invoice for such goods.",
+    "B": "The amount of input tax on capital goods used exclusively for effecting taxable supplies including zero-rated supplies shall be credited to the electronic credit ledger.",
+    "C": "The amount of input tax on capital goods used exclusively for non-business purposes or exempt supplies shall not be credited to the electronic credit ledger.",
+    "D": "The useful life of capital goods used for both taxable and exempt supplies is taken as five years from the date of the invoice for such goods."
+   },
+   "key": [
+    "B",
+    "C",
+    "D"
+   ],
+   "deterministic_passed": true,
+   "quote_grounding": 1.0,
+   "evidence_status": "supported",
+   "answer_agreement": true,
+   "requested_difficulty": "Medium",
+   "estimated_difficulty": "Medium",
+   "duplicate_of": null,
+   "reasons": [],
+   "revisions": 0,
+   "judge": {
+    "relevance": 5,
+    "factual_correctness": 5,
+    "clarity": 5,
+    "difficulty_fit": 5,
+    "distractor_quality": 5,
+    "answer_explanation_consistency": 5,
+    "rationale": "The question directly addresses Rule 43's methodology for ITC on capital goods, squarely within the topic 'Apportionment and reversal of credit'. All statements are factually accurate per the reference material, with correct key (B, C, D) and precise explanation. The distractor (A) is plausible but clearly incorrect based on Rule 43(c) applying only to common use, not exclusive non-business/exempt use. The explanation correctly identifies why each option is right or wrong, aligning perfectly with the key. The question requires applying Rule 43 to different usage scenarios (exclusive vs. common), involving two to three reasoning steps, fitting the Medium difficulty level. All elements are clearly stated, making the question unambiguous and well-constructed."
+   },
+   "examiner_issues": [
+    {
+     "category": "ambiguity",
+     "severity": "minor",
+     "detail": "Option (D) uses the phrase 'used for both taxable and exempt supplies', which is not the exact terminology of Rule 43(1)(c) (which refers to 'not covered under clauses (a) and (b)'). While the meaning is clear in context, a candidate might question whether partial use qualifies or if it must be common use. However, the study material consistently equates this scenario with common use, so the ambiguity is minor."
+    }
+   ]
+  },
+  {
+   "case": "itc_apportionment_medium_multiple",
+   "id": "q_b7e50fa5a4",
+   "status": "NEEDS_REVIEW",
+   "verdict": "passed_for_human_review",
+   "question": "Which of the following situations require the apportionment of input tax credit under section 17 of the CGST Act, 2017? (select all that apply)",
+   "options": {
+    "A": "When goods and/or services are used by the registered person partly for the purpose of business and partly for other purposes.",
+    "B": "When goods and/or services are used by the registered person exclusively for making taxable supplies including zero-rated supplies.",
+    "C": "When goods and/or services are used by the registered person partly for making taxable supplies including zero-rated supplies and partly for making exempt supplies.",
+    "D": "When goods and/or services are used by the registered person exclusively for non-business purposes."
+   },
+   "key": [
+    "A",
+    "C"
+   ],
+   "deterministic_passed": true,
+   "quote_grounding": 1.0,
+   "evidence_status": "supported",
+   "answer_agreement": true,
+   "requested_difficulty": "Medium",
+   "estimated_difficulty": "Medium",
+   "duplicate_of": null,
+   "reasons": [],
+   "revisions": 0,
+   "judge": {
+    "relevance": 5,
+    "factual_correctness": 5,
+    "clarity": 5,
+    "difficulty_fit": 5,
+    "distractor_quality": 5,
+    "answer_explanation_consistency": 5,
+    "rationale": "The question directly tests the core concept of apportionment under Section 17 of the CGST Act, specifically the two statutory situations requiring apportionment: (i) partly for business and partly for other purposes (A), and (ii) partly for taxable and partly for exempt supplies (C). Both are explicitly listed in the reference material [C4]. Option B correctly represents a scenario where no apportionment is needed (exclusive taxable use), and D correctly reflects no credit at all (exclusive non-business use), making them valid distractors. The explanation accurately cites Section 17(1) and (2), aligns with the study material, and clearly justifies the correct and incorrect options. The question requires two reasoning steps—identifying mixed usage and linking it to statutory provisions—fitting the 'Medium' difficulty level. All distractors are plausible but clearly incorrect upon analysis, and the explanation consistently supports the key without contradiction."
+   },
+   "examiner_issues": [
+    {
+     "category": "ambiguity",
+     "severity": "minor",
+     "detail": "Option (D) could be misinterpreted by candidates who conflate 'no credit available' with 'apportionment resulting in zero credit'. However, the law distinguishes between blocking credit (no apportionment needed) and partial use (apportionment required). The distinction is clear in the material, so this is only a minor ambiguity."
+    },
+    {
+     "category": "incomplete_conditions",
+     "severity": "minor",
+     "detail": "The question does not specify whether 'other purposes' in Option (A) includes 'non-business purposes', but this is defined in the study material (e.g., [C4]). Since the term is standard and defined in the syllabus, this is not a major issue."
+    }
+   ]
+  },
+  {
+   "case": "supply_composite_medium_application",
+   "id": "q_b1e1f5036f",
+   "status": "NEEDS_REVIEW",
+   "verdict": "needs_revision",
+   "question": "Satyamev Printers undertakes the printing of books where the content is supplied by the publisher, but the physical inputs including paper belong to the printer. The supply is billed at a single price. What is the nature and tax treatment of this supply?",
+   "options": {
+    "A": "It is a composite supply and shall be treated as a supply of goods, being the principal supply.",
+    "B": "It is a mixed supply and shall be treated as a supply of that particular supply which attracts the highest rate of tax.",
+    "C": "It is a composite supply and shall be treated as a supply of goods since the printed books are physically delivered to the publisher.",
+    "D": "It is a composite supply and shall be treated as a supply of services, being the principal supply."
+   },
+   "key": [
+    "D"
+   ],
+   "deterministic_passed": true,
+   "quote_grounding": 1.0,
+   "evidence_status": "supported",
+   "answer_agreement": true,
+   "requested_difficulty": "Medium",
+   "estimated_difficulty": "Medium",
+   "duplicate_of": null,
+   "reasons": [
+    "examiner major: explanation_inconsistent - The explanation states that 'the material clarifies that when physical inputs belong to the printer, the supply of printing is the principal supply (a service)'. However, this specific rule is not derived from general principles in [C1]-[C5], but only explicitly stated in [C6] (Circular No. 11/11/2017-GST). The explanation implies this is a general analytical outcome, whereas it is actually based on a specific circular cited in the material. This risks misleading candidates into thinking the conclusion can be derived purely from Section 2(90) and Section 8(a) without reference to the circular, which is not accurate. This undermines the reliability of the reasoning."
+   ],
+   "revisions": 1,
+   "judge": {
+    "relevance": 5,
+    "factual_correctness": 5,
+    "clarity": 5,
+    "difficulty_fit": 5,
+    "distractor_quality": 5,
+    "answer_explanation_consistency": 5,
+    "rationale": "The question squarely addresses composite and mixed supply under GST, specifically focusing on identifying the principal supply in a printing services context, which is directly aligned with the chapter and topic. The factual basis matches the reference material (especially C6), which explicitly states that when physical inputs belong to the printer, the principal supply is the printing service. The question is clear, with all necessary facts provided, and fits the 'Medium' difficulty as it requires application of Section 8(a) and understanding of principal supply in a short scenario. Each distractor is plausible but clearly incorrect upon analysis: (A) and (C) wrongly treat goods as principal, (B) misclassifies as mixed supply. The explanation correctly justifies why (D) is right and each wrong option is properly refuted, aligning fully with the key."
+   },
+   "examiner_issues": [
+    {
+     "category": "ambiguity",
+     "severity": "minor",
+     "detail": "The phrase 'content is supplied by the publisher' could be interpreted as only digital content or including intellectual property rights, but the reference material assumes that 'content' refers to intangible input without transfer of ownership in goods. This is clarified sufficiently in [C6], so the ambiguity is minor."
+    },
+    {
+     "category": "explanation_inconsistent",
+     "severity": "major",
+     "detail": "The explanation states that 'the material clarifies that when physical inputs belong to the printer, the supply of printing is the principal supply (a service)'. However, this specific rule is not derived from general principles in [C1]-[C5], but only explicitly stated in [C6] (Circular No. 11/11/2017-GST). The explanation implies this is a general analytical outcome, whereas it is actually based on a specific circular cited in the material. This risks misleading candidates into thinking the conclusion can be derived purely from Section 2(90) and Section 8(a) without reference to the circular, which is not accurate. This undermines the reliability of the reasoning."
+    }
+   ]
+  },
+  {
+   "case": "supply_composite_medium_application",
+   "id": "q_300213ef6e",
+   "status": "NEEDS_REVIEW",
+   "verdict": "needs_revision",
+   "question": "A taxable person supplies a gift pack comprising chocolates, candies, sweets, and balloons for a single price. These items can be supplied independently but are sold together. What is the tax liability applicable to this supply?",
+   "options": {
+    "A": "It is a mixed supply and shall be treated as a supply of that particular supply which attracts the highest rate of tax.",
+    "B": "It is a mixed supply and each item in the gift pack shall be taxed separately at the rate applicable to each item.",
+    "C": "It is a composite supply and shall be treated as a supply of its principal supply.",
+    "D": "It is a mixed supply and shall be treated as a supply of that particular supply which attracts the lowest rate of tax."
+   },
+   "key": [
+    "A"
+   ],
+   "deterministic_passed": true,
+   "quote_grounding": 1.0,
+   "evidence_status": "supported",
+   "answer_agreement": true,
+   "requested_difficulty": "Medium",
+   "estimated_difficulty": "Medium",
+   "duplicate_of": null,
+   "reasons": [
+    "examiner disputes key on options ['C']",
+    "examiner major: ambiguity - The term 'naturally bundled' is context-sensitive. While C4 uses the identical example (gift pack with chocolates, candies, sweets, balloons) and classifies it as mixed supply, this assumes a legal conclusion. In reality, whether such items are 'naturally bundled' could depend on marketing, occasion (e.g., birthday kits), or consumer perception. The question presents it as fact without establishing context, making (C) arguable despite the reference example."
+   ],
+   "revisions": 1,
+   "judge": {
+    "relevance": 5,
+    "factual_correctness": 5,
+    "clarity": 5,
+    "difficulty_fit": 5,
+    "distractor_quality": 5,
+    "answer_explanation_consistency": 5,
+    "rationale": "The question directly addresses the topic 'Composite and mixed supply' under the chapter 'Supply under GST', aligning perfectly with the requested scope. The scenario involves a gift pack of independent items, which the reference material explicitly cites as a mixed supply (C4). The correct answer (A) correctly applies Section 8(b) by identifying the highest tax rate rule for mixed supplies. The explanation accurately distinguishes mixed from composite supply using the concept of 'naturally bundled' (C2, C4) and correctly refutes other options. The distractors reflect common misconceptions (e.g., separate taxation, lowest rate, misclassification as composite), making them plausible yet clearly incorrect. The difficulty is Medium: it requires applying the definition of mixed supply and its tax treatment to a scenario with two reasoning steps—identifying the nature of the supply and applying the correct tax rule. The explanation consistently supports the key and thoroughly refutes each distractor using statutory reasoning."
+   },
+   "examiner_issues": [
+    {
+     "category": "ambiguity",
+     "severity": "major",
+     "detail": "The term 'naturally bundled' is context-sensitive. While C4 uses the identical example (gift pack with chocolates, candies, sweets, balloons) and classifies it as mixed supply, this assumes a legal conclusion. In reality, whether such items are 'naturally bundled' could depend on marketing, occasion (e.g., birthday kits), or consumer perception. The question presents it as fact without establishing context, making (C) arguable despite the reference example."
+    },
+    {
+     "category": "incomplete_conditions",
+     "severity": "minor",
+     "detail": "The question does not specify whether the gift pack is marketed for a specific occasion (e.g., birthday, wedding) or as a general novelty item. This missing context affects the 'naturally bundled' determination and thus the composite vs. mixed classification."
+    },
+    {
+     "category": "explanation_inconsistent",
+     "severity": "minor",
+     "detail": "The explanation states that the items are 'not naturally bundled' as a definitive fact, but the reference material (C4) uses the same example as an illustration of mixed supply without analysis. The explanation treats a debatable legal characterization as settled, which may mislead candidates about the certainty of such classifications."
+    }
+   ]
+  },
+  {
+   "case": "supply_schedule1_hard_multiconcept",
+   "id": "q_ff5a1bf5e1",
+   "status": "NEEDS_REVIEW",
+   "verdict": "passed_for_human_review",
+   "question": "Mr. Chakmak, a proprietor registered in Delhi, received architectural services without consideration from his son located in the US. Which of the following statements correctly determines the taxability of this transaction under the GST law?",
+   "options": {
+    "A": "It will not qualify as supply in either case, since services received without consideration from a related person can never be treated as supply under the GST law.",
+    "B": "It will qualify as supply in both cases, since import of services by a related person without consideration is treated as supply irrespective of whether it is in the course or furtherance of business.",
+    "C": "It will not qualify as supply if the services are received with respect to his newly constructed house, but will qualify as supply if received with respect to his office in Delhi.",
+    "D": "It will not qualify as supply in either case, since the services received by way of gift from his son (a related person) are exempt up to ₹50,000 in value in a financial year."
+   },
+   "key": [
+    "C"
+   ],
+   "deterministic_passed": true,
+   "quote_grounding": 1.0,
+   "evidence_status": "supported",
+   "answer_agreement": true,
+   "requested_difficulty": "Hard",
+   "estimated_difficulty": "Hard",
+   "duplicate_of": null,
+   "reasons": [
+    "warning: no_absolute_word_cue (absolute words only in distractors ['A'])"
+   ],
+   "revisions": 0,
+   "judge": {
+    "relevance": 5,
+    "factual_correctness": 5,
+    "clarity": 5,
+    "difficulty_fit": 5,
+    "distractor_quality": 5,
+    "answer_explanation_consistency": 5,
+    "rationale": "The question precisely targets the topic 'Activities treated as supply without consideration' under GST, specifically focusing on import of services from a related person without consideration, which is covered under Section 7(1)(c) read with Entry 4 of Schedule I. The correct answer (C) aligns perfectly with reference material [C4], which explicitly distinguishes between personal and business use. The explanation accurately justifies why (C) is correct and why others are wrong, referencing the necessity of 'course or furtherance of business' and correctly dismissing the ₹50,000 gift exemption as inapplicable outside employer-employee relationships. All distractors are plausible but clearly incorrect upon analysis, representing common misconceptions (e.g., blanket exclusion of related-party transactions, misapplication of gift rules). The question requires multiple reasoning steps—identifying related person, import of services, absence of consideration, and business purpose—making it Hard as per the rubric. The language is clear, unambiguous, and contains all necessary facts. The explanation consistently supports the keyed answer and refutes others with precise statutory reasoning."
+   },
+   "examiner_issues": [
+    {
+     "category": "ambiguity",
+     "severity": "minor",
+     "detail": "The phrase 'in either case' in options (A) and (B) is ambiguous. It implies two cases, but none are specified in the question stem. This could confuse candidates into assuming unstated scenarios. However, context from the explanation clarifies it refers to the two situations in option (C), so the ambiguity is resolvable."
+    },
+    {
+     "category": "incomplete_conditions",
+     "severity": "minor",
+     "detail": "The question does not explicitly state whether the architectural services are for personal or business use — this information is only revealed in option (C). While this is typical for MCQs, it makes options (A), (B), and (D) appear contextually incomplete until (C) is read. This could be seen as slightly unfair, though not fatal."
+    },
+    {
+     "category": "explanation_inconsistent",
+     "severity": "minor",
+     "detail": "The explanation refers to 'the proviso to section 7(1)(c)' regarding the ₹50,000 gift exemption, but the reference material cites it as a 'provided that' clause in section 7(1)(c), not a proviso. This is a minor drafting inaccuracy but does not affect legal correctness."
+    }
+   ]
+  },
+  {
+   "case": "supply_schedule1_hard_multiconcept",
+   "id": "q_5a906e00a6",
+   "status": "NEEDS_REVIEW",
+   "verdict": "passed_for_human_review",
+   "question": "Alpha Ltd. (principal) appointed Beta Ltd. (agent) to procure raw materials. Beta Ltd. receives the raw materials on behalf of Alpha Ltd. and issues the invoice in its own name. In a separate transaction, Alpha Ltd. permanently disposed of business assets on which Input Tax Credit (ITC) was availed, without receiving any consideration. Which of the following statements is correct regarding the taxability of these transactions?",
+   "options": {
+    "A": "The transaction between Alpha Ltd. and Beta Ltd. is not treated as supply since Beta Ltd. received the raw materials rather than supplied them, and the disposal of business assets by Alpha Ltd. is treated as supply only if ITC was availed on such assets.",
+    "B": "Neither transaction qualifies as supply since both are made without consideration, and the GST law requires consideration for a transaction to be treated as supply.",
+    "C": "The transaction between Alpha Ltd. and Beta Ltd. is treated as supply of goods by the principal to the agent, and the disposal of business assets by Alpha Ltd. is not treated as supply since it is without consideration.",
+    "D": "The transaction between Alpha Ltd. and Beta Ltd. is treated as supply of goods by the agent to the principal, and the disposal of business assets by Alpha Ltd. is treated as supply even without consideration."
+   },
+   "key": [
+    "D"
+   ],
+   "deterministic_passed": true,
+   "quote_grounding": 1.0,
+   "evidence_status": "supported",
+   "answer_agreement": true,
+   "requested_difficulty": "Hard",
+   "estimated_difficulty": "Hard",
+   "duplicate_of": null,
+   "reasons": [
+    "warning: no_absolute_word_cue (absolute words only in distractors ['A'])"
+   ],
+   "revisions": 1,
+   "judge": {
+    "relevance": 5,
+    "factual_correctness": 5,
+    "clarity": 5,
+    "difficulty_fit": 5,
+    "distractor_quality": 5,
+    "answer_explanation_consistency": 5,
+    "rationale": "The MCQ directly tests 'Activities treated as supply without consideration' under the chapter 'Supply under GST', focusing on Schedule I provisions—specifically principal-agent transactions (Para 3) and permanent disposal of business assets with ITC (Para 1). The key and explanation align precisely with the reference material (C2, C3, C6). The question is clear, with all necessary facts presented and no ambiguity. It qualifies as 'Hard' per the rubric: it involves two distinct, non-trivial applications of Schedule I, each requiring correct identification of direction of supply and interaction with ITC conditions, within a realistic scenario containing relevant and irrelevant details (e.g., invoice issuance in agent’s name). All distractors are plausible but clearly incorrect upon analysis: (A) reverses the supply direction; (B) ignores deemed supply concepts; (C) misassigns both the direction of supply and the treatment of asset disposal. The explanation correctly justifies D and systematically refutes the others, matching the reference material."
+   },
+   "examiner_issues": [
+    {
+     "category": "ambiguity",
+     "severity": "minor",
+     "detail": "The phrase 'issues the invoice in its own name' could be misinterpreted as suggesting a different supply chain, but under Schedule II and agent-principal principles, invoicing practice does not override the deemed supply rule under Schedule I. However, this is clarified by reference material and does not create genuine ambiguity for a well-prepared candidate."
+    },
+    {
+     "category": "incomplete_conditions",
+     "severity": "minor",
+     "detail": "The question assumes that the business assets disposed of were capital goods on which ITC was availed, but this is not explicitly stated beyond 'on which ITC was availed'. While implied, specifying 'capital goods' might strengthen clarity. However, the reference material treats 'business assets' broadly, so this is acceptable."
+    }
+   ]
+  },
+  {
+   "case": "tos_goods_easy_multiple",
+   "id": "q_f219f4a477",
+   "status": "NEEDS_REVIEW",
+   "verdict": "passed_for_human_review",
+   "question": "Which of the following statements correctly state the time of supply of goods under section 12 of the CGST Act, 2017? (select all that apply)",
+   "options": {
+    "A": "The time of supply of goods is the earlier of the date of issue of invoice (or last date for issue of invoice) or the date of receipt of payment.",
+    "B": "The time of supply of goods is the earlier of the date of actual supply of goods or the date of issue of invoice.",
+    "C": "Where the supplier receives an amount up to one thousand rupees in excess of the amount indicated in the tax invoice, the time of supply to the extent of such excess is, at the option of the supplier, the date of issue of invoice.",
+    "D": "The date on which the supplier receives the payment is the date on which the payment is entered in his books of account or the date on which the payment is credited to his bank account, whichever is earlier."
+   },
+   "key": [
+    "A",
+    "C",
+    "D"
+   ],
+   "deterministic_passed": true,
+   "quote_grounding": 1.0,
+   "evidence_status": "supported",
+   "answer_agreement": true,
+   "requested_difficulty": "Easy",
+   "estimated_difficulty": "Medium",
+   "duplicate_of": null,
+   "reasons": [
+    "difficulty: requested Easy, estimated Medium"
+   ],
+   "revisions": 1,
+   "judge": {
+    "relevance": 5,
+    "factual_correctness": 5,
+    "clarity": 5,
+    "difficulty_fit": 5,
+    "distractor_quality": 5,
+    "answer_explanation_consistency": 5,
+    "rationale": "The MCQ directly tests the core provisions of Section 12(2) of the CGST Act, 2017 on the time of supply of goods, which is the requested topic. All correct options (A, C, D) are factually accurate per the statutory text and reference material, particularly [C1] and [C6]. Option (B) is correctly identified as incorrect because the actual date of supply is not part of the general rule under Section 12(2); it is relevant under Section 14 for rate change scenarios, as explained in [C2] and [C6]. The clarity is high: the question, options, and explanation are unambiguous and self-contained. The difficulty is Easy, as it requires recognition and recall of a single statutory provision and its explanation—no multi-step reasoning or complex scenario interpretation is needed. The distractors are well-crafted: (B) is tempting because 'actual supply' appears in GST discussions (e.g., Section 14), but it is not part of Section 12(2)'s general rule. (D) correctly reflects Explanation 2 and is not a distractor. The explanation precisely justifies each option, aligns with the key, and refutes (B) using correct reasoning. Hence, all criteria score 5."
+   },
+   "examiner_issues": [
+    {
+     "category": "ambiguity",
+     "severity": "minor",
+     "detail": "Option (B) uses the term 'actual supply of goods', which is not defined in Section 12 but appears in Section 14. While the term is contextually clear to a prepared candidate, its inclusion without clarification may cause confusion between general time of supply rules and special rules for rate change. However, since the reference material distinguishes these contexts, the ambiguity is minor."
+    },
+    {
+     "category": "incomplete_conditions",
+     "severity": "minor",
+     "detail": "Option (C) does not explicitly mention that the relaxation applies only when the excess is received in respect of an invoice already issued. While the proviso implies this, a candidate might interpret it as applying to any small receipt. However, the reference material and explanation clarify the context, so this is not critical."
+    }
+   ]
+  },
+  {
+   "case": "tos_goods_easy_multiple",
+   "id": "q_01c2a37e3e",
+   "status": "NEEDS_REVIEW",
+   "verdict": "passed_for_human_review",
+   "question": "Which of the following dates are considered in determining the time of supply of goods under reverse charge mechanism? (select all that apply)",
+   "options": {
+    "A": "Date on which goods are received.",
+    "B": "Date on which the payment is recorded in the books of account of the recipient of goods.",
+    "C": "Date on which the payment is debited from the bank account of the recipient of goods.",
+    "D": "Date on which the payment is credited to the bank account of the supplier of goods."
+   },
+   "key": [
+    "A",
+    "B",
+    "C"
+   ],
+   "deterministic_passed": true,
+   "quote_grounding": 1.0,
+   "evidence_status": "supported",
+   "answer_agreement": true,
+   "requested_difficulty": "Easy",
+   "estimated_difficulty": "Medium",
+   "duplicate_of": null,
+   "reasons": [
+    "difficulty: requested Easy, estimated Medium"
+   ],
+   "revisions": 1,
+   "judge": {
+    "relevance": 5,
+    "factual_correctness": 5,
+    "clarity": 5,
+    "difficulty_fit": 5,
+    "distractor_quality": 5,
+    "answer_explanation_consistency": 5,
+    "rationale": "The question directly tests the topic 'Time of supply of goods under reverse charge mechanism' as per Section 12(3), which is squarely within the requested chapter and topic. The key (A, B, C) matches the reference material (C5, C3), which lists the earliest of: date of receipt of goods, date payment recorded in recipient's books, date payment debited from recipient's bank account, or 31st day from invoice. Option D is a well-crafted distractor that reflects a forward charge scenario, making it tempting but clearly incorrect under reverse charge. The explanation correctly justifies each option, aligning with the statutory provisions and distinguishing recipient vs supplier perspective. The question requires only recognition of listed dates (one reasoning step), fitting the 'Easy' level. All necessary facts are present, and the explanation precisely supports the correct key without contradiction."
+   },
+   "examiner_issues": [
+    {
+     "category": "ambiguity",
+     "severity": "minor",
+     "detail": "Option C uses 'debited from the bank account', while the reference material [C5] uses 'debited in the bank account'. The preposition difference ('from' vs 'in') is minor but could cause confusion. However, in banking context, 'debited from' is commonly understood and does not materially alter meaning."
+    },
+    {
+     "category": "incomplete_conditions",
+     "severity": "minor",
+     "detail": "The question omits the 31st day from the issue of invoice as a possible determinant, which is part of the statutory provision under Section 12(3). However, since the question asks 'which of the following dates', and not 'which are all the dates', this omission does not invalidate the key."
+    }
+   ]
+  },
+  {
+   "case": "pos_services_hard_case",
+   "id": "q_9051d4e8b8",
+   "status": "NEEDS_REVIEW",
+   "verdict": "needs_revision",
+   "question": "M/s Sunrise Logistics Pvt. Ltd., a registered person located in Mumbai, Maharashtra, provides services of transportation of goods (via road) to M/s Global Traders. The goods are transported from Delhi to Chennai. M/s Global Traders is an unregistered person, and its billing address as per the records of M/s Sunrise Logistics is in Jaipur, Rajasthan. However, M/s Global Traders has no presence or business operations in Rajasthan, and the services are effectively used by its branch office in Chennai, Tamil Nadu. Determine the place of supply of the transportation services.",
+   "options": {
+    "A": "Chennai, Tamil Nadu",
+    "B": "Jaipur, Rajasthan",
+    "C": "Mumbai, Maharashtra",
+    "D": "Delhi"
+   },
+   "key": [
+    "B"
+   ],
+   "deterministic_passed": true,
+   "quote_grounding": 1.0,
+   "evidence_status": "supported",
+   "answer_agreement": false,
+   "requested_difficulty": "Hard",
+   "estimated_difficulty": "Medium",
+   "duplicate_of": null,
+   "reasons": [
+    "examiner disputes key on options ['A']",
+    "examiner major: ambiguity - The term 'address on record' is used without defining whether it must reflect a genuine business connection or can be a nominal/billing address with no operational nexus. The scenario states the recipient has no presence or operations in Rajasthan, making the Jaipur address effectively a paper address. The Study Material (C5) states the rule depends on 'availability' of address in records, not its authenticity or operational relevance. However, this creates ambiguity: does 'on record' include addresses known by the supplier to be non-functional or fictitious? If so, the law may be applied mechanically, but candidates may reasonably question whether such an address constitutes a valid 'location of the recipient' under the Act.",
+    "examiner critical: multiple_correct - Option A (Chennai) is arguable due to the effective use and operational reality, even though the official rule favors B. While the Study Material does not recognize 'effective use' for domestic supplies under Section 12, it acknowledges such a principle in cross-border cases under Section 13(13). A strong candidate could argue that applying a purely documentary rule (Jaipur) when the recipient has no nexus there and the service is fully consumed in Chennai leads to an anomalous result. Given that the recipient’s 'location' should reflect economic reality, and considering judicial trends favoring substance over form, two answers (A and B) are defensible, undermining the single-correct format.",
+    "blind solver answered ['A'], key is ['B']",
+    "difficulty: requested Hard, estimated Medium"
+   ],
+   "revisions": 1,
+   "judge": {
+    "relevance": 5,
+    "factual_correctness": 4,
+    "clarity": 5,
+    "difficulty_fit": 5,
+    "distractor_quality": 5,
+    "answer_explanation_consistency": 5,
+    "rationale": "The question squarely addresses the topic 'Place of supply of services domestic' under Section 12 of the IGST Act, focusing on the default rule for unregistered recipients. It is highly relevant. The factual correctness is mostly accurate: Section 12(2)(b)(i) correctly identifies the place of supply as the location of the recipient where the address on record exists, which is Jaipur. However, the explanation incorrectly states that there is no specific provision for transportation of goods under Section 12 — in fact, Section 12(8) covers transportation of goods by a goods transport agency (GTA), though the question explicitly excludes applicability of Sections 12(3) to (14), so this is a minor imprecision, not a factual error. The clarity is excellent — all necessary facts are present and unambiguous. The difficulty fits the 'Hard' level: it requires distinguishing between default rules, understanding the irrelevance of effective use, and rejecting intuitive but incorrect location-based reasoning (e.g., Chennai or Delhi). The distractors are well-crafted, reflecting common misconceptions (effective use, supplier's location, origin/destination). The explanation consistently justifies the correct answer and refutes each distractor with reference to law and logic."
+   },
+   "examiner_issues": [
+    {
+     "category": "ambiguity",
+     "severity": "major",
+     "detail": "The term 'address on record' is used without defining whether it must reflect a genuine business connection or can be a nominal/billing address with no operational nexus. The scenario states the recipient has no presence or operations in Rajasthan, making the Jaipur address effectively a paper address. The Study Material (C5) states the rule depends on 'availability' of address in records, not its authenticity or operational relevance. However, this creates ambiguity: does 'on record' include addresses known by the supplier to be non-functional or fictitious? If so, the law may be applied mechanically, but candidates may reasonably question whether such an address constitutes a valid 'location of the recipient' under the Act."
+    },
+    {
+     "category": "multiple_correct",
+     "severity": "critical",
+     "detail": "Option A (Chennai) is arguable due to the effective use and operational reality, even though the official rule favors B. While the Study Material does not recognize 'effective use' for domestic supplies under Section 12, it acknowledges such a principle in cross-border cases under Section 13(13). A strong candidate could argue that applying a purely documentary rule (Jaipur) when the recipient has no nexus there and the service is fully consumed in Chennai leads to an anomalous result. Given that the recipient’s 'location' should reflect economic reality, and considering judicial trends favoring substance over form, two answers (A and B) are defensible, undermining the single-correct format."
+    },
+    {
+     "category": "explanation_inconsistent",
+     "severity": "minor",
+     "detail": "The explanation states that Section 12 does not contain a specific provision for transportation of goods. However, while there is no explicit clause for goods transport under Section 12(3)-(14), the absence of a specific rule reinforces the application of the default rule under Section 12(2), which is correctly applied. This part of the explanation is acceptable, though slightly imprecise. The real issue lies in not acknowledging that the lack of a specific rule makes the default rule the only guide, which increases reliance on 'address on record'—but this is not inconsistent per se."
+    }
+   ]
+  },
+  {
+   "case": "pos_services_hard_case",
+   "id": "q_d6d907a4f0",
+   "status": "NEEDS_REVIEW",
+   "verdict": "needs_revision",
+   "question": "M/s Eventz India, a registered entity in New Delhi, is engaged by M/s Tech Solutions, an unregistered person located in Gurugram, Haryana, to organize a 3-day business conference. The conference is scheduled to be held in Kathmandu, Nepal. M/s Eventz India raises the invoice for their services on 10th October, 2026. Determine the place of supply of the event organization services provided by M/s Eventz India.",
+   "options": {
+    "A": "Kathmandu, Nepal",
+    "B": "Gurugram, Haryana",
+    "C": "New Delhi",
+    "D": "Bengaluru, Karnataka"
+   },
+   "key": [
+    "B"
+   ],
+   "deterministic_passed": true,
+   "quote_grounding": 1.0,
+   "evidence_status": "supported",
+   "answer_agreement": true,
+   "requested_difficulty": "Hard",
+   "estimated_difficulty": "Hard",
+   "duplicate_of": null,
+   "reasons": [
+    "examiner major: explanation_inconsistent - The explanation incorrectly cites Section 12(7) as the basis for the rule, but Section 12 applies only when both supplier and recipient are in India AND the event is held in India. However, the event is in Kathmandu (outside India), so Section 12 does not apply at all. The correct provision is Section 13(8), which specifically deals with event organization services when the event is held outside India. The Study Material at p.133 references 'section 12(7)(a)(ii)' in a hypothetical, but that appears to be an error or oversimplification. The statutory framework mandates that when either the event or recipient is outside India, Section 13 applies. Therefore, the legal reasoning in the explanation is flawed, even if the conclusion (B) aligns with the illustrative example.",
+    "examiner major: incomplete_conditions - The question assumes Section 12 applies, but fails to clarify whether the cross-border nature of the event (in Nepal) triggers Section 13. The reference material does not explicitly resolve whether Section 12(7) with its proviso applies by analogy when the event is outside India but both parties are in India. This creates ambiguity about the applicable section. The correct determination hinges on whether the 'location of recipient' being in India and the 'event outside India' brings Section 13 into play — a point not clarified in the material.",
+    "examiner major: ambiguity - The term 'location of recipient' is used, but the material requires that the address must be 'on record' for it to determine place of supply under certain clauses. The question does not state whether M/s Tech Solutions' address is on record with M/s Eventz India, which could affect the outcome under default rules. While specific rules override defaults, the omission leaves room for interpretive doubt."
+   ],
+   "revisions": 1,
+   "judge": {
+    "relevance": 5,
+    "factual_correctness": 4,
+    "clarity": 5,
+    "difficulty_fit": 5,
+    "distractor_quality": 5,
+    "answer_explanation_consistency": 5,
+    "rationale": "The question squarely tests the topic 'Place of supply of services domestic' under Section 12, specifically the exception in Section 12(7) for event organization services held outside India, making it highly relevant. The factual correctness is mostly accurate, though the explanation incorrectly cites Section 12(7)(a)(ii) as applying directly — the correct structure is that Section 12(7)(a) applies to unregistered recipients, and the proviso (not a clause) modifies it when the event is outside India; this is a minor imprecision, not a fundamental error. The clarity is excellent: the scenario, parties, and key facts (unregistered recipient, event abroad) are clearly stated. The difficulty fits the 'Hard' level: it requires recognizing the specific provision (Section 12(7)), understanding the proviso exception for overseas events, and avoiding the trap of applying the general rule — involving multiple reasoning steps and interaction of conditions. Distractors are well-crafted: (A) tests confusion between general rule and proviso, (C) tests misapplication of default rule, (D) tests recall bias from study material examples — all plausible but clearly wrong upon analysis. The explanation consistently justifies (B) using the correct logic (event outside India triggers recipient location as place of supply), clearly refutes other options, and aligns with the key, despite the minor citation flaw."
+   },
+   "examiner_issues": [
+    {
+     "category": "explanation_inconsistent",
+     "severity": "major",
+     "detail": "The explanation incorrectly cites Section 12(7) as the basis for the rule, but Section 12 applies only when both supplier and recipient are in India AND the event is held in India. However, the event is in Kathmandu (outside India), so Section 12 does not apply at all. The correct provision is Section 13(8), which specifically deals with event organization services when the event is held outside India. The Study Material at p.133 references 'section 12(7)(a)(ii)' in a hypothetical, but that appears to be an error or oversimplification. The statutory framework mandates that when either the event or recipient is outside India, Section 13 applies. Therefore, the legal reasoning in the explanation is flawed, even if the conclusion (B) aligns with the illustrative example."
+    },
+    {
+     "category": "incomplete_conditions",
+     "severity": "major",
+     "detail": "The question assumes Section 12 applies, but fails to clarify whether the cross-border nature of the event (in Nepal) triggers Section 13. The reference material does not explicitly resolve whether Section 12(7) with its proviso applies by analogy when the event is outside India but both parties are in India. This creates ambiguity about the applicable section. The correct determination hinges on whether the 'location of recipient' being in India and the 'event outside India' brings Section 13 into play — a point not clarified in the material."
+    },
+    {
+     "category": "ambiguity",
+     "severity": "major",
+     "detail": "The term 'location of recipient' is used, but the material requires that the address must be 'on record' for it to determine place of supply under certain clauses. The question does not state whether M/s Tech Solutions' address is on record with M/s Eventz India, which could affect the outcome under default rules. While specific rules override defaults, the omission leaves room for interpretive doubt."
+    }
+   ]
+  },
+  {
+   "case": "itc_amendment_mode",
+   "id": "q_8df6a4bf0f",
+   "status": "NEEDS_REVIEW",
+   "verdict": "passed_for_human_review",
+   "question": "PQR Ltd., a registered supplier, provided a post supply discount to a customer in October 2026 pursuant to an agreement entered into in September 2026 (after the original supply). The supplier issued a credit note. Assuming the amendment proposed by the Finance Act, 2026 has come into effect, which of the following statements is valid regarding the treatment of Input Tax Credit (ITC) by the recipient?",
+   "options": {
+    "A": "The recipient is required to reverse the proportionate ITC as the discount will be excluded from the value of supply upon issuance of credit note.",
+    "B": "The recipient is not required to reverse the input tax credit as there is no reduction in the original transaction value of the supply when a credit note is issued.",
+    "C": "The recipient is eligible to retain the ITC as the discount provided is in the nature of a post supply discount which does not affect the tax liability of the original transaction.",
+    "D": "The recipient cannot claim any reduction in value of supply as the post supply discount agreement was not in existence at the time of the original supply and cannot be linked invoice-wise."
+   },
+   "key": [
+    "A"
+   ],
+   "deterministic_passed": true,
+   "quote_grounding": 1.0,
+   "evidence_status": "supported",
+   "answer_agreement": true,
+   "requested_difficulty": "Medium",
+   "estimated_difficulty": "Medium",
+   "duplicate_of": null,
+   "reasons": [],
+   "revisions": 1,
+   "judge": {
+    "relevance": 5,
+    "factual_correctness": 5,
+    "clarity": 5,
+    "difficulty_fit": 5,
+    "distractor_quality": 5,
+    "answer_explanation_consistency": 5,
+    "rationale": "The question directly addresses the topic 'Eligibility and conditions for taking ITC' under the chapter 'Input Tax Credit', focusing on post-supply discount treatment after the Finance Act, 2026 amendment — a core aspect of ITC eligibility. The factual basis is accurately drawn from reference material [C1], which explicitly states that under the proposed amendment, discount is excluded from supply value only if a credit note is issued and recipient reverses proportionate ITC. The correct answer (A) aligns perfectly with this. The distractors (B, C, D) reflect pre-amendment misconceptions, making them plausible yet clearly incorrect under the new rule. The explanation thoroughly justifies the correct key and refutes wrong options using statutory reasoning. The difficulty is Medium, as it requires applying one amended provision to a scenario involving a post-supply discount and credit note — two reasoning steps without multi-provision interaction. All information needed is present, and the explanation is fully consistent with the keyed answer."
+   },
+   "examiner_issues": [
+    {
+     "category": "explanation_inconsistent",
+     "severity": "minor",
+     "detail": "The explanation references Chapter 7 – Value of Supply in Module 1, but no such chapter or module content is provided in the reference material excerpts. While the substance of the explanation aligns with [C1], the citation is unsupported by the given references, which could confuse a candidate relying solely on the provided material."
+    }
+   ]
+  }
+ ]
+}

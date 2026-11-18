@@ -1,0 +1,16 @@
+# Secrets
+.env
+
+# ICAI documents are copyrighted: never commit them. Use data/metadata/sources.json + scripts/fetch_sources.py
+data/raw/
+data/processed/
+*.pdf
+
+# Generated / local state
+data/index/
+data/bank/
+data/runs/
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/

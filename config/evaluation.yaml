@@ -1,0 +1,27 @@
+# Evaluation configuration.
+
+# USD per 1M tokens, used only to *estimate* cost from measured token counts. Update when prices change.
+pricing:
+  claude-opus-5-5: {input: 4.00, output: 20.00}
+  claude-sonnet-5-5: {input: 2.00, output: 10.00}
+  claude-haiku-5-5: {input: 0.10, output: 0.50}
+  # AWS Bedrock ap-south-1 on-demand standard tier (AWS Pricing API, 2026-11-18)
+  zai.glm-5: {input: 1.20, output: 3.84}
+  qwen.qwen3-235b-a22b-2507-v1:0: {input: 0.26, output: 1.04}
+  mock-deterministic-v1: {input: 0.0, output: 0.0}
+
+# Regression gate: a candidate benchmark run fails if a metric drops more than max_drop below the
+# baseline run, or falls under the absolute floor. Rates are 0..1.
+regression:
+  valid_output_rate: {max_drop: 0.05, floor: 0.80}
+  first_pass_valid_rate: {max_drop: 0.10}
+  quote_grounding_mean: {max_drop: 0.05, floor: 0.80}
+  evidence_supported_rate: {max_drop: 0.10}
+  answer_agreement_rate: {max_drop: 0.10}
+  difficulty_match_rate: {max_drop: 0.15}
+  passed_for_review_rate: {max_drop: 0.10}
+  duplicate_rate: {max_rise: 0.05}
+  insufficient_detection_rate: {floor: 1.0}
+
+retrieval:
+  k: 6

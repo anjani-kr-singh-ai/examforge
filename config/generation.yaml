@@ -1,0 +1,55 @@
+# Generation configuration. Everything here is injected into versioned prompts and is a *starting*
+# rubric, editable without code changes.
+
+# Active prompt version per stage (env PROMPT_VERSIONS=stage=v,... overrides).
+active_prompts:
+  question_setter: v2
+  distractor_generator: v1
+  reviser: v1
+  critical_examiner: v1
+  evidence_verifier: v1
+  difficulty_reviewer: v1
+  judge: v1
+
+difficulty_rubric:
+  Easy: >-
+    Direct recall or recognition of a single provision, definition, rate, time limit or condition as
+    stated in the material. One reasoning step. No scenario needed, or a trivial one.
+  Medium: >-
+    Apply one provision (including its conditions or an exception) to a short scenario. Two to three
+    reasoning steps; the candidate must notice which condition or exception governs the facts.
+  Hard: >-
+    Multi-step application where two or more provisions/conditions interact, or a nuanced exception /
+    proviso decides the outcome. Realistic scenario with relevant and irrelevant facts; distractors are
+    the outcomes of applying the right rule with one subtle error. Length alone never makes a question Hard.
+
+question_types:
+  single: >-
+    Exactly ONE option is correct. Every other option must be definitely incorrect under the stated facts
+    and the reference material - not merely "less good".
+  multiple: >-
+    Two or three options are correct (never one, never all four). The stem must say "Which of the following
+    ... (select all that apply)". Each option must be independently true or false, so a candidate can judge
+    each one on its own. Identify every correct option; the answer key must be internally consistent.
+
+modes:
+  conceptual: Test understanding of a concept, definition, condition or rule directly.
+  application: Give a short hypothetical fact pattern and ask how a specific provision applies to it.
+  case_based: >-
+    Give a realistic business scenario (registered person, transactions, amounts, dates) containing the
+    facts needed to decide, and ask for the correct legal interpretation/outcome. State all assumptions.
+  multi_concept: >-
+    Combine two related provisions that the context explicitly connects (e.g. eligibility + time limit),
+    so that answering requires both. Do not combine concepts the context does not relate.
+  amendment: >-
+    Test a change in law that the context explicitly documents (inserted/substituted/omitted provisions,
+    "w.e.f." dates, Finance Act amendments) and its applicability. Use only changes stated in the context.
+
+misconception_taxonomy:
+  related_provision_confusion: Confusing the rule with a neighbouring/similar provision.
+  condition_misread: Missing or misreading one of the conditions of the rule.
+  exception_misapplied: Applying an exception/proviso where it does not apply (or ignoring one that does).
+  eligibility_vs_procedure: Mixing up whether something is allowed vs. how/when it must be done.
+  threshold_or_time_limit: Wrong threshold, rate, amount, percentage, period or due date.
+  rule_misapplied: Correct rule, wrong application to the facts (e.g. wrong party, wrong place, wrong event).
+  other: Any other plausible error a prepared candidate might make (explain it).

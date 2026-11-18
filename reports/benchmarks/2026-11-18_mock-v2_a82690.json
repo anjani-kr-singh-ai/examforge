@@ -1,0 +1,810 @@
+{
+ "run_id": "2026-11-18_mock-v2_a82690",
+ "label": "mock-v2",
+ "timestamp": "2026-11-18T10:01:25+00:00",
+ "provider": "mock",
+ "model": "mock-deterministic-v1",
+ "reviewer_model": "mock-deterministic-v1",
+ "mock": true,
+ "prompt_versions": {
+  "question_setter": "v2",
+  "distractor_generator": "v1",
+  "reviser": "v1",
+  "critical_examiner": "v1",
+  "evidence_verifier": "v1",
+  "difficulty_reviewer": "v1",
+  "judge": "v1"
+ },
+ "params": {
+  "effort": "high",
+  "top_k": 6,
+  "chunk_size": 350,
+  "max_revisions": 1,
+  "max_retries": 3,
+  "duplicate_threshold": 0.92
+ },
+ "cases": [
+  {
+   "id": "itc_eligibility_easy_single",
+   "status": "ok",
+   "message": "",
+   "n_requested": 2,
+   "n_generated": 2,
+   "expect_insufficient": false,
+   "insufficient_ok": true,
+   "llm_calls": 10,
+   "retries": 0,
+   "latency_s": 0.0,
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "failed_calls": 0
+  },
+  {
+   "id": "itc_blocked_medium_application",
+   "status": "ok",
+   "message": "",
+   "n_requested": 2,
+   "n_generated": 2,
+   "expect_insufficient": false,
+   "insufficient_ok": true,
+   "llm_calls": 7,
+   "retries": 0,
+   "latency_s": 0.0,
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "failed_calls": 0
+  },
+  {
+   "id": "itc_timelimit_hard_case",
+   "status": "ok",
+   "message": "",
+   "n_requested": 2,
+   "n_generated": 2,
+   "expect_insufficient": false,
+   "insufficient_ok": true,
+   "llm_calls": 10,
+   "retries": 0,
+   "latency_s": 0.0,
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "failed_calls": 0
+  },
+  {
+   "id": "itc_apportionment_medium_multiple",
+   "status": "ok",
+   "message": "",
+   "n_requested": 2,
+   "n_generated": 2,
+   "expect_insufficient": false,
+   "insufficient_ok": true,
+   "llm_calls": 10,
+   "retries": 0,
+   "latency_s": 0.0,
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "failed_calls": 0
+  },
+  {
+   "id": "supply_composite_medium_application",
+   "status": "ok",
+   "message": "",
+   "n_requested": 2,
+   "n_generated": 2,
+   "expect_insufficient": false,
+   "insufficient_ok": true,
+   "llm_calls": 10,
+   "retries": 0,
+   "latency_s": 0.0,
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "failed_calls": 0
+  },
+  {
+   "id": "supply_schedule1_hard_multiconcept",
+   "status": "ok",
+   "message": "",
+   "n_requested": 2,
+   "n_generated": 2,
+   "expect_insufficient": false,
+   "insufficient_ok": true,
+   "llm_calls": 7,
+   "retries": 0,
+   "latency_s": 0.0,
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "failed_calls": 0
+  },
+  {
+   "id": "tos_goods_easy_multiple",
+   "status": "ok",
+   "message": "",
+   "n_requested": 2,
+   "n_generated": 2,
+   "expect_insufficient": false,
+   "insufficient_ok": true,
+   "llm_calls": 10,
+   "retries": 0,
+   "latency_s": 0.0,
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "failed_calls": 0
+  },
+  {
+   "id": "pos_services_hard_case",
+   "status": "ok",
+   "message": "",
+   "n_requested": 2,
+   "n_generated": 2,
+   "expect_insufficient": false,
+   "insufficient_ok": true,
+   "llm_calls": 10,
+   "retries": 0,
+   "latency_s": 0.0,
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "failed_calls": 0
+  },
+  {
+   "id": "itc_amendment_mode",
+   "status": "ok",
+   "message": "",
+   "n_requested": 1,
+   "n_generated": 1,
+   "expect_insufficient": false,
+   "insufficient_ok": true,
+   "llm_calls": 6,
+   "retries": 0,
+   "latency_s": 0.0,
+   "input_tokens": 0,
+   "output_tokens": 0,
+   "failed_calls": 0
+  },
+  {
+   "id": "value_no_sources",
+   "status": "insufficient_evidence",
+   "message": "No indexed source documents for chapter 'Value of Supply' applicable to May 2027. Available periods: ['May 2025', 'May 2026', 'May 2027', 'Nov 2025', 'Nov 2026', 'Nov 2027'].",
+   "n_requested": 2,
+   "n_generated": 0,
+   "expect_insufficient": true,
+   "insufficient_ok": true
+  },
+  {
+   "id": "wrong_period",
+   "status": "insufficient_evidence",
+   "message": "No indexed source documents for chapter 'Input Tax Credit' applicable to Nov 2030. Available periods: ['May 2025', 'May 2026', 'May 2027', 'Nov 2025', 'Nov 2026', 'Nov 2027'].",
+   "n_requested": 2,
+   "n_generated": 0,
+   "expect_insufficient": true,
+   "insufficient_ok": true
+  }
+ ],
+ "metrics": {
+  "n_cases": 11,
+  "n_questions": 17,
+  "yield_rate": 1.0,
+  "valid_output_rate": 0.8824,
+  "first_pass_valid_rate": 0.8824,
+  "quote_grounding_mean": 1.0,
+  "evidence_supported_rate": 1.0,
+  "answer_agreement_rate": 1.0,
+  "difficulty_match_rate": 1.0,
+  "passed_for_review_rate": 0.8824,
+  "rejected_rate": 0.0,
+  "duplicate_rate": 0.0,
+  "revision_rate": 0.1176,
+  "insufficient_detection_rate": 1.0,
+  "judge_means": {
+   "relevance": 3.0,
+   "factual_correctness": 3.0,
+   "clarity": 3.0,
+   "difficulty_fit": 3.0,
+   "distractor_quality": 3.0,
+   "answer_explanation_consistency": 3.0
+  },
+  "llm_calls": 80,
+  "failed_calls": 0,
+  "retry_rate": 0.0,
+  "latency_s_total": 0.0,
+  "latency_s_per_question": 0.0,
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "est_cost_usd": 0.0,
+  "status_counts": {
+   "NEEDS_REVIEW": 15,
+   "DRAFT": 2
+  },
+  "verdict_counts": {
+   "passed_for_human_review": 15,
+   "needs_revision": 2
+  }
+ },
+ "questions": [
+  {
+   "case": "itc_eligibility_easy_single",
+   "id": "q_a36c854325",
+   "status": "NEEDS_REVIEW",
+   "verdict": "passed_for_human_review",
+   "question": "[MOCK] With reference to Eligibility and conditions for taking ITC, which of the following statement(s) is/are correct as per the study material? [variant 1]",
+   "options": {
+    "A": "ITC is restricted in proportion of the use of the services and/or services (i) in the taxable and / or zero-rated supplies (ii) for business purposes.",
+    "B": "ITC is restricted in proportion of the use of the goods and/or services (i) in the taxable and / or zero-rated supplies (ii) for business purposes.",
+    "C": "ITC is restricted in proportion of the use of the goods and/or services (i) in the taxable and / or zero-rated supplies (ii) for business purposes except where the recipient is a composition taxpayer.",
+    "D": "ITC is not restricted in proportion of the use of the goods and/or services (i) in the taxable and / or zero-rated supplies (ii) for business purposes."
+   },
+   "key": [
+    "B"
+   ],
+   "deterministic_passed": true,
+   "quote_grounding": 1.0,
+   "evidence_status": "supported",
+   "answer_agreement": true,
+   "requested_difficulty": "Easy",
+   "estimated_difficulty": "Easy",
+   "duplicate_of": null,
+   "reasons": [],
+   "revisions": 0,
+   "judge": {
+    "relevance": 3,
+    "factual_correctness": 3,
+    "clarity": 3,
+    "difficulty_fit": 3,
+    "distractor_quality": 3,
+    "answer_explanation_consistency": 3,
+    "rationale": "[MOCK] fixed scores"
+   },
+   "examiner_issues": []
+  },
+  {
+   "case": "itc_eligibility_easy_single",
+   "id": "q_5b75633b52",
+   "status": "NEEDS_REVIEW",
+   "verdict": "passed_for_human_review",
+   "question": "[MOCK] With reference to Eligibility and conditions for taking ITC, which of the following statement(s) is/are correct as per the study material? [variant 2]",
+   "options": {
+    "A": "Explanation.—For the purposes of this clause, it shall not be deemed that the registered person has received the goods or, as the case may be, services–",
+    "B": "Explanation.—For the purposes of this clause, it shall be deemed that the registered person has received the goods or, as the case may be, services– except where the recipient is a composition taxpayer.",
+    "C": "Explanation.—For the purposes of this clause, it shall be deemed that the registered person has received the goods or, as the case may be, services–",
+    "D": "Explanation.—For the purposes of this clause, it shall be deemed that the unregistered person has received the goods or, as the case may be, services–"
+   },
+   "key": [
+    "C"
+   ],
+   "deterministic_passed": true,
+   "quote_grounding": 1.0,
+   "evidence_status": "supported",
+   "answer_agreement": true,
+   "requested_difficulty": "Easy",
+   "estimated_difficulty": "Easy",
+   "duplicate_of": null,
+   "reasons": [],
+   "revisions": 0,
+   "judge": {
+    "relevance": 3,
+    "factual_correctness": 3,
+    "clarity": 3,
+    "difficulty_fit": 3,
+    "distractor_quality": 3,
+    "answer_explanation_consistency": 3,
+    "rationale": "[MOCK] fixed scores"
+   },
+   "examiner_issues": []
+  },
+  {
+   "case": "itc_blocked_medium_application",
+   "id": "q_0fc6e78372",
+   "status": "NEEDS_REVIEW",
+   "verdict": "passed_for_human_review",
+   "question": "[MOCK] With reference to Blocked credits, which of the following statement(s) is/are correct as per the study material? [variant 1]",
+   "options": {
+    "A": "ITC on works contract services for construction of an immovable property is not blocked EXCEPT WHEN",
+    "B": "ITC on works contract services for construction of an immovable property is blocked EXCEPT WHEN except where the recipient is a composition taxpayer.",
+    "C": "ITC on works contract services for construction of an immovable property is blocked EXCEPT WHEN subject to prior approval of the proper officer.",
+    "D": "ITC on works contract services for construction of an immovable property is blocked EXCEPT WHEN"
+   },
+   "key": [
+    "D"
+   ],
+   "deterministic_passed": true,
+   "quote_grounding": 1.0,
+   "evidence_status": "supported",
+   "answer_agreement": true,
+   "requested_difficulty": "Medium",
+   "estimated_difficulty": "Medium",
+   "duplicate_of": null,
+   "reasons": [],
+   "revisions": 0,
+   "judge": {
+    "relevance": 3,
+    "factual_correctness": 3,
+    "clarity": 3,
+    "difficulty_fit": 3,
+    "distractor_quality": 3,
+    "answer_explanation_consistency": 3,
+    "rationale": "[MOCK] fixed scores"
+   },
+   "examiner_issues": []
+  },
+  {
+   "case": "itc_blocked_medium_application",
+   "id": "q_20d9530d5c",
+   "status": "DRAFT",
+   "verdict": "needs_revision",
+   "question": "[MOCK] With reference to Blocked credits, which of the following statement(s) is/are correct as per the study material? [variant 2]",
+   "options": {
+    "A": "only a works contractor can avail ITC on works contract services received by him.] subject to prior approval of the proper officer.",
+    "B": "only a works contractor can avail ITC on works contract services received by him.]",
+    "C": "only a works contractor can avail ITC on works contract services received by him.] except where the recipient is a composition taxpayer.",
+    "D": "only a works contractor can avail ITC on works contract services received by him.] except where the recipient is a composition taxpayer."
+   },
+   "key": [
+    "B"
+   ],
+   "deterministic_passed": false,
+   "quote_grounding": 1.0,
+   "evidence_status": "not_checked",
+   "answer_agreement": null,
+   "requested_difficulty": "Medium",
+   "estimated_difficulty": null,
+   "duplicate_of": null,
+   "reasons": [
+    "check failed: options_distinct (near-identical options [('C', 'D')])"
+   ],
+   "revisions": 1,
+   "judge": null,
+   "examiner_issues": []
+  },
+  {
+   "case": "itc_timelimit_hard_case",
+   "id": "q_5819516cd2",
+   "status": "NEEDS_REVIEW",
+   "verdict": "passed_for_human_review",
+   "question": "[MOCK] With reference to Time limit for availing ITC, which of the following statement(s) is/are correct as per the study material? [variant 1]",
+   "options": {
+    "A": "(9) Hercules Machinery delivered a machine to XYZ, a monthly return filer under GST, in the month of January under Invoice no.",
+    "B": "(18) Hercules Machinery delivered a machine to XYZ, a monthly return filer under GST, in the month of January under Invoice no.",
+    "C": "(9) Hercules Machinery delivered a machine to XYZ, a monthly return filer under GST, in the month of January under Invoice no except where the recipient is a composition taxpayer.",
+    "D": "(9) Hercules Machinery delivered a machine to XYZ, a monthly return filer under GST, in the month of January under Invoice no subject to prior approval of the proper officer."
+   },
+   "key": [
+    "A"
+   ],
+   "deterministic_passed": true,
+   "quote_grounding": 1.0,
+   "evidence_status": "supported",
+   "answer_agreement": true,
+   "requested_difficulty": "Hard",
+   "estimated_difficulty": "Hard",
+   "duplicate_of": null,
+   "reasons": [],
+   "revisions": 0,
+   "judge": {
+    "relevance": 3,
+    "factual_correctness": 3,
+    "clarity": 3,
+    "difficulty_fit": 3,
+    "distractor_quality": 3,
+    "answer_explanation_consistency": 3,
+    "rationale": "[MOCK] fixed scores"
+   },
+   "examiner_issues": []
+  },
+  {
+   "case": "itc_timelimit_hard_case",
+   "id": "q_4a7cf9111e",
+   "status": "NEEDS_REVIEW",
+   "verdict": "passed_for_human_review",
+   "question": "[MOCK] With reference to Time limit for availing ITC, which of the following statement(s) is/are correct as per the study material? [variant 2]",
+   "options": {
+    "A": "XYZ did not file its annual return for FY 2025-26 till the end of November, 2026 subject to prior approval of the proper officer.",
+    "B": "XYZ did not file its annual return for FY 2025-26 till the end of November, 2026 except where the recipient is a composition taxpayer.",
+    "C": "XYZ did not file its annual return for FY 1012-26 till the end of November, 2026.",
+    "D": "XYZ did not file its annual return for FY 2025-26 till the end of November, 2026."
+   },
+   "key": [
+    "D"
+   ],
+   "deterministic_passed": true,
+   "quote_grounding": 1.0,
+   "evidence_status": "supported",
+   "answer_agreement": true,
+   "requested_difficulty": "Hard",
+   "estimated_difficulty": "Hard",
+   "duplicate_of": null,
+   "reasons": [],
+   "revisions": 0,
+   "judge": {
+    "relevance": 3,
+    "factual_correctness": 3,
+    "clarity": 3,
+    "difficulty_fit": 3,
+    "distractor_quality": 3,
+    "answer_explanation_consistency": 3,
+    "rationale": "[MOCK] fixed scores"
+   },
+   "examiner_issues": []
+  },
+  {
+   "case": "itc_apportionment_medium_multiple",
+   "id": "q_f2e8d4cf97",
+   "status": "NEEDS_REVIEW",
+   "verdict": "passed_for_human_review",
+   "question": "[MOCK] With reference to Apportionment and reversal of credit, which of the following statement(s) is/are correct as per the study material? (select all that apply) [variant 1]",
+   "options": {
+    "A": "(ii) Methodology of apportionment of credit of capital goods and reversal thereof [Rule 86]",
+    "B": "(ii) Methodology of apportionment of credit of capital goods and reversal thereof [Rule 43]",
+    "C": "Rule 43 provides the methodology for apportionment of ITC on capital goods and reversal of ineligible credit as follows:",
+    "D": "(ii) Methodology of apportionment of credit of capital services and reversal thereof [Rule 43]"
+   },
+   "key": [
+    "B",
+    "C"
+   ],
+   "deterministic_passed": true,
+   "quote_grounding": 1.0,
+   "evidence_status": "supported",
+   "answer_agreement": true,
+   "requested_difficulty": "Medium",
+   "estimated_difficulty": "Medium",
+   "duplicate_of": null,
+   "reasons": [],
+   "revisions": 0,
+   "judge": {
+    "relevance": 3,
+    "factual_correctness": 3,
+    "clarity": 3,
+    "difficulty_fit": 3,
+    "distractor_quality": 3,
+    "answer_explanation_consistency": 3,
+    "rationale": "[MOCK] fixed scores"
+   },
+   "examiner_issues": []
+  },
+  {
+   "case": "itc_apportionment_medium_multiple",
+   "id": "q_a5d151aab8",
+   "status": "NEEDS_REVIEW",
+   "verdict": "passed_for_human_review",
+   "question": "[MOCK] With reference to Apportionment and reversal of credit, which of the following statement(s) is/are correct as per the study material? (select all that apply) [variant 2]",
+   "options": {
+    "A": "(i) Identify input tax on capital goods used/ intended to be used except where the recipient is a composition taxpayer.",
+    "B": "(ii) Identify input tax on capital goods used/ intended to be used",
+    "C": "(i) Identify input tax on capital goods used/ intended to be used",
+    "D": "(i) Identify input tax on capital services used/ intended to be used"
+   },
+   "key": [
+    "B",
+    "C"
+   ],
+   "deterministic_passed": true,
+   "quote_grounding": 1.0,
+   "evidence_status": "supported",
+   "answer_agreement": true,
+   "requested_difficulty": "Medium",
+   "estimated_difficulty": "Medium",
+   "duplicate_of": null,
+   "reasons": [],
+   "revisions": 0,
+   "judge": {
+    "relevance": 3,
+    "factual_correctness": 3,
+    "clarity": 3,
+    "difficulty_fit": 3,
+    "distractor_quality": 3,
+    "answer_explanation_consistency": 3,
+    "rationale": "[MOCK] fixed scores"
+   },
+   "examiner_issues": []
+  },
+  {
+   "case": "supply_composite_medium_application",
+   "id": "q_05a0297c95",
+   "status": "NEEDS_REVIEW",
+   "verdict": "passed_for_human_review",
+   "question": "[MOCK] With reference to Composite and mixed supply, which of the following statement(s) is/are correct as per the study material? [variant 1]",
+   "options": {
+    "A": "In such cases, the rate of tax to be levied on such supplies may be a challenge except where the recipient is a composition taxpayer.",
+    "B": "In such cases, the rate of tax to be levied on such supplies may not be a challenge.",
+    "C": "In such cases, the rate of tax to be levied on such supplies may be a challenge.",
+    "D": "In such cases, the rate of tax to be levied on such supplies may be a challenge subject to prior approval of the proper officer."
+   },
+   "key": [
+    "C"
+   ],
+   "deterministic_passed": true,
+   "quote_grounding": 1.0,
+   "evidence_status": "supported",
+   "answer_agreement": true,
+   "requested_difficulty": "Medium",
+   "estimated_difficulty": "Medium",
+   "duplicate_of": null,
+   "reasons": [],
+   "revisions": 0,
+   "judge": {
+    "relevance": 3,
+    "factual_correctness": 3,
+    "clarity": 3,
+    "difficulty_fit": 3,
+    "distractor_quality": 3,
+    "answer_explanation_consistency": 3,
+    "rationale": "[MOCK] fixed scores"
+   },
+   "examiner_issues": []
+  },
+  {
+   "case": "supply_composite_medium_application",
+   "id": "q_d87ba9e967",
+   "status": "NEEDS_REVIEW",
+   "verdict": "passed_for_human_review",
+   "question": "[MOCK] With reference to Composite and mixed supply, which of the following statement(s) is/are correct as per the study material? [variant 2]",
+   "options": {
+    "A": "The concept of ‘naturally bundled’ supplies is emanating from the definition of ‘composite supply’ subject to prior approval of the proper officer.",
+    "B": "The concept of ‘naturally bundled’ supplies is emanating from the definition of ‘composite supply’.",
+    "C": "The concept of ‘naturally bundled’ supplies is not emanating from the definition of ‘composite supply’.",
+    "D": "The concept of ‘naturally bundled’ supplies is emanating from the definition of ‘composite supply’ except where the recipient is a composition taxpayer."
+   },
+   "key": [
+    "B"
+   ],
+   "deterministic_passed": true,
+   "quote_grounding": 1.0,
+   "evidence_status": "supported",
+   "answer_agreement": true,
+   "requested_difficulty": "Medium",
+   "estimated_difficulty": "Medium",
+   "duplicate_of": null,
+   "reasons": [],
+   "revisions": 0,
+   "judge": {
+    "relevance": 3,
+    "factual_correctness": 3,
+    "clarity": 3,
+    "difficulty_fit": 3,
+    "distractor_quality": 3,
+    "answer_explanation_consistency": 3,
+    "rationale": "[MOCK] fixed scores"
+   },
+   "examiner_issues": []
+  },
+  {
+   "case": "supply_schedule1_hard_multiconcept",
+   "id": "q_abff550eeb",
+   "status": "DRAFT",
+   "verdict": "needs_revision",
+   "question": "[MOCK] With reference to Activities treated as supply without consideration, which of the following statement(s) is/are correct as per the study material? [variant 1]",
+   "options": {
+    "A": "The scope of supply under GST can be understood in terms of following parameters:",
+    "B": "The scope of supply under GST can be understood in terms of following parameters: except where the recipient is a composition taxpayer.",
+    "C": "The scope of supply under GST can be understood in terms of following parameters: except where the recipient is a composition taxpayer.",
+    "D": "The scope of supply under GST can be understood in terms of following parameters: subject to prior approval of the proper officer."
+   },
+   "key": [
+    "A"
+   ],
+   "deterministic_passed": false,
+   "quote_grounding": 1.0,
+   "evidence_status": "not_checked",
+   "answer_agreement": null,
+   "requested_difficulty": "Hard",
+   "estimated_difficulty": null,
+   "duplicate_of": null,
+   "reasons": [
+    "check failed: options_distinct (near-identical options [('B', 'C')])"
+   ],
+   "revisions": 1,
+   "judge": null,
+   "examiner_issues": []
+  },
+  {
+   "case": "supply_schedule1_hard_multiconcept",
+   "id": "q_6c8873c0db",
+   "status": "NEEDS_REVIEW",
+   "verdict": "passed_for_human_review",
+   "question": "[MOCK] With reference to Activities treated as supply without consideration, which of the following statement(s) is/are correct as per the study material? [variant 2]",
+   "options": {
+    "A": "Further, import of services for a consideration, whether or not in the course or furtherance of business is treated as supply.",
+    "B": "Further, import of services for a consideration, whether or not in the course or furtherance of business is treated as supply subject to prior approval of the proper officer.",
+    "C": "Further, import of services for a consideration, whether or not in the course or furtherance of business is treated as supply except where the recipient is a composition taxpayer.",
+    "D": "Further, import of services for a consideration, whether or not in the course or furtherance of business is not treated as supply."
+   },
+   "key": [
+    "A"
+   ],
+   "deterministic_passed": true,
+   "quote_grounding": 1.0,
+   "evidence_status": "supported",
+   "answer_agreement": true,
+   "requested_difficulty": "Hard",
+   "estimated_difficulty": "Hard",
+   "duplicate_of": null,
+   "reasons": [],
+   "revisions": 0,
+   "judge": {
+    "relevance": 3,
+    "factual_correctness": 3,
+    "clarity": 3,
+    "difficulty_fit": 3,
+    "distractor_quality": 3,
+    "answer_explanation_consistency": 3,
+    "rationale": "[MOCK] fixed scores"
+   },
+   "examiner_issues": []
+  },
+  {
+   "case": "tos_goods_easy_multiple",
+   "id": "q_74919403bb",
+   "status": "NEEDS_REVIEW",
+   "verdict": "passed_for_human_review",
+   "question": "[MOCK] With reference to Time of supply of goods, which of the following statement(s) is/are correct as per the study material? (select all that apply) [variant 1]",
+   "options": {
+    "A": "(1) The liability to pay tax on goods shall arise at the time of supply as determined in terms of the provisions of this section.",
+    "B": "(1) The liability to pay tax on goods shall not arise at the time of supply as determined in terms of the provisions of this section.",
+    "C": "(2) The liability to pay tax on goods shall arise at the time of supply as determined in terms of the provisions of this section.",
+    "D": "(2) The time of supply of goods shall be the earlier of the following dates, namely:-"
+   },
+   "key": [
+    "A",
+    "D"
+   ],
+   "deterministic_passed": true,
+   "quote_grounding": 1.0,
+   "evidence_status": "supported",
+   "answer_agreement": true,
+   "requested_difficulty": "Easy",
+   "estimated_difficulty": "Easy",
+   "duplicate_of": null,
+   "reasons": [],
+   "revisions": 0,
+   "judge": {
+    "relevance": 3,
+    "factual_correctness": 3,
+    "clarity": 3,
+    "difficulty_fit": 3,
+    "distractor_quality": 3,
+    "answer_explanation_consistency": 3,
+    "rationale": "[MOCK] fixed scores"
+   },
+   "examiner_issues": []
+  },
+  {
+   "case": "tos_goods_easy_multiple",
+   "id": "q_99897b08c0",
+   "status": "NEEDS_REVIEW",
+   "verdict": "passed_for_human_review",
+   "question": "[MOCK] With reference to Time of supply of goods, which of the following statement(s) is/are correct as per the study material? (select all that apply) [variant 2]",
+   "options": {
+    "A": "(b) the date on which the recipient receives the payment with respect to the supply2:",
+    "B": "(b) the date on which the supplier receives the payment with respect to the supply4:",
+    "C": "For the purposes of clauses (a) and (b), the “supply” shall be deemed to have been made to the extent it is covered by the invoice or, as the case may be, the payment.",
+    "D": "(b) the date on which the supplier receives the payment with respect to the supply2:"
+   },
+   "key": [
+    "C",
+    "D"
+   ],
+   "deterministic_passed": true,
+   "quote_grounding": 1.0,
+   "evidence_status": "supported",
+   "answer_agreement": true,
+   "requested_difficulty": "Easy",
+   "estimated_difficulty": "Easy",
+   "duplicate_of": null,
+   "reasons": [],
+   "revisions": 0,
+   "judge": {
+    "relevance": 3,
+    "factual_correctness": 3,
+    "clarity": 3,
+    "difficulty_fit": 3,
+    "distractor_quality": 3,
+    "answer_explanation_consistency": 3,
+    "rationale": "[MOCK] fixed scores"
+   },
+   "examiner_issues": []
+  },
+  {
+   "case": "pos_services_hard_case",
+   "id": "q_e65927deba",
+   "status": "NEEDS_REVIEW",
+   "verdict": "passed_for_human_review",
+   "question": "[MOCK] With reference to Place of supply of services domestic, which of the following statement(s) is/are correct as per the study material? [variant 1]",
+   "options": {
+    "A": "LOCATION OF SUPPLIER OR LOCATION OF RECIPIENT IS OUTSIDE INDIA [SECTION 13]",
+    "B": "LOCATION OF SUPPLIER OR LOCATION OF RECIPIENT IS OUTSIDE INDIA [SECTION 26]",
+    "C": "LOCATION OF SUPPLIER OR LOCATION OF RECIPIENT IS OUTSIDE INDIA [SECTION 13] except where the recipient is a composition taxpayer.",
+    "D": "LOCATION OF SUPPLIER OR LOCATION OF RECIPIENT IS OUTSIDE INDIA [SECTION 13] subject to prior approval of the proper officer."
+   },
+   "key": [
+    "A"
+   ],
+   "deterministic_passed": true,
+   "quote_grounding": 1.0,
+   "evidence_status": "supported",
+   "answer_agreement": true,
+   "requested_difficulty": "Hard",
+   "estimated_difficulty": "Hard",
+   "duplicate_of": null,
+   "reasons": [],
+   "revisions": 0,
+   "judge": {
+    "relevance": 3,
+    "factual_correctness": 3,
+    "clarity": 3,
+    "difficulty_fit": 3,
+    "distractor_quality": 3,
+    "answer_explanation_consistency": 3,
+    "rationale": "[MOCK] fixed scores"
+   },
+   "examiner_issues": []
+  },
+  {
+   "case": "pos_services_hard_case",
+   "id": "q_70a8bb9e9e",
+   "status": "NEEDS_REVIEW",
+   "verdict": "passed_for_human_review",
+   "question": "[MOCK] With reference to Place of supply of services domestic, which of the following statement(s) is/are correct as per the study material? [variant 2]",
+   "options": {
+    "A": "(2) The place of supply of services except the services specified in subsections (3) to (13) shall be the location of the recipient of services:",
+    "B": "(2) The place of supply of services except the services specified in subsections (3) to (13) shall be the location of the recipient of services: except where the recipient is a composition taxpayer.",
+    "C": "(4) The place of supply of services except the services specified in subsections (3) to (13) shall be the location of the recipient of services:",
+    "D": "(2) The place of supply of services except the services specified in subsections (3) to (13) shall not be the location of the recipient of services:"
+   },
+   "key": [
+    "A"
+   ],
+   "deterministic_passed": true,
+   "quote_grounding": 1.0,
+   "evidence_status": "supported",
+   "answer_agreement": true,
+   "requested_difficulty": "Hard",
+   "estimated_difficulty": "Hard",
+   "duplicate_of": null,
+   "reasons": [],
+   "revisions": 0,
+   "judge": {
+    "relevance": 3,
+    "factual_correctness": 3,
+    "clarity": 3,
+    "difficulty_fit": 3,
+    "distractor_quality": 3,
+    "answer_explanation_consistency": 3,
+    "rationale": "[MOCK] fixed scores"
+   },
+   "examiner_issues": []
+  },
+  {
+   "case": "itc_amendment_mode",
+   "id": "q_e7394dffc9",
+   "status": "NEEDS_REVIEW",
+   "verdict": "passed_for_human_review",
+   "question": "[MOCK] With reference to Eligibility and conditions for taking ITC, which of the following statement(s) is/are correct as per the study material? [variant 1]",
+   "options": {
+    "A": "Thus, it is clarified that the recipient will not be required to reverse the Input Tax Credit attributed to the discount provided on the basis of financial/ commercial refund notes",
+    "B": "Thus, it is clarified that the recipient will not be required to reverse the Input Tax Credit attributed to the discount provided on the basis of financial/ commercial credit notes",
+    "C": "Thus, it is clarified that the recipient will not be required to reverse the Input Tax Credit attributed to the discount provided on the basis of financial/ commercial credit notes except where the recipient is a composition taxpayer.",
+    "D": "Thus, it is not clarified that the recipient will not be required to reverse the Input Tax Credit attributed to the discount provided on the basis of financial/ commercial credit notes"
+   },
+   "key": [
+    "B"
+   ],
+   "deterministic_passed": true,
+   "quote_grounding": 1.0,
+   "evidence_status": "supported",
+   "answer_agreement": true,
+   "requested_difficulty": "Medium",
+   "estimated_difficulty": "Medium",
+   "duplicate_of": null,
+   "reasons": [],
+   "revisions": 0,
+   "judge": {
+    "relevance": 3,
+    "factual_correctness": 3,
+    "clarity": 3,
+    "difficulty_fit": 3,
+    "distractor_quality": 3,
+    "answer_explanation_consistency": 3,
+    "rationale": "[MOCK] fixed scores"
+   },
+   "examiner_issues": []
+  }
+ ]
+}

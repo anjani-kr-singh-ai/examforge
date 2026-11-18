@@ -1,0 +1,10 @@
+[project]
+name = "examforge-ai"
+version = "0.1.0"
+description = "Evidence-grounded, self-evaluating CA Final MCQ generation engine (ICAI IDT)"
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+filterwarnings = ["ignore::DeprecationWarning"]

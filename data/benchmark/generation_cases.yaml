@@ -1,0 +1,28 @@
+# Fixed generation benchmark. Same inputs for every prompt/model version so runs are comparable.
+# Assessment period "May 2027" = ICAI Study Material (Sept 2026 edition), GST law as on 30.04.2026.
+# expect_insufficient cases check that the system refuses instead of generating from memory.
+cases:
+  - id: itc_eligibility_easy_single
+    request: {chapter: Input Tax Credit, topic: Eligibility and conditions for taking ITC, n: 2, difficulty: Easy, question_type: single, mode: conceptual, attempt: May 2027}
+  - id: itc_blocked_medium_application
+    request: {chapter: Input Tax Credit, topic: Blocked credits, n: 2, difficulty: Medium, question_type: single, mode: application, attempt: May 2027}
+  - id: itc_timelimit_hard_case
+    request: {chapter: Input Tax Credit, topic: Time limit for availing ITC, n: 2, difficulty: Hard, question_type: single, mode: case_based, attempt: May 2027}
+  - id: itc_apportionment_medium_multiple
+    request: {chapter: Input Tax Credit, topic: Apportionment and reversal of credit, n: 2, difficulty: Medium, question_type: multiple, mode: conceptual, attempt: May 2027}
+  - id: supply_composite_medium_application
+    request: {chapter: Supply under GST, topic: Composite and mixed supply, n: 2, difficulty: Medium, question_type: single, mode: application, attempt: May 2027}
+  - id: supply_schedule1_hard_multiconcept
+    request: {chapter: Supply under GST, topic: Activities treated as supply without consideration, n: 2, difficulty: Hard, question_type: single, mode: multi_concept, attempt: May 2027}
+  - id: tos_goods_easy_multiple
+    request: {chapter: Time of Supply, topic: Time of supply of goods, n: 2, difficulty: Easy, question_type: multiple, mode: conceptual, attempt: May 2027}
+  - id: pos_services_hard_case
+    request: {chapter: Place of Supply, topic: Place of supply of services domestic, n: 2, difficulty: Hard, question_type: single, mode: case_based, attempt: May 2027}
+  - id: itc_amendment_mode
+    request: {chapter: Input Tax Credit, topic: Eligibility and conditions for taking ITC, n: 1, difficulty: Medium, question_type: single, mode: amendment, attempt: May 2027}
+  - id: value_no_sources
+    expect_insufficient: true
+    request: {chapter: Value of Supply, topic: Discounts, n: 2, difficulty: Medium, question_type: single, mode: conceptual, attempt: May 2027}
+  - id: wrong_period
+    expect_insufficient: true
+    request: {chapter: Input Tax Credit, topic: Blocked credits, n: 2, difficulty: Medium, question_type: single, mode: conceptual, attempt: Nov 2030}

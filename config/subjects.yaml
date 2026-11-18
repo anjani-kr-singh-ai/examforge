@@ -1,0 +1,57 @@
+# Subject -> chapter -> topic hierarchy used for (a) UI pick-lists, (b) query expansion keywords,
+# (c) syllabus coverage analytics. Chapter names follow the ICAI CA Final Paper 5 (IDT) study material
+# chapters for GST; verify against the edition you ingest. Topic keyword lists are retrieval query
+# expansions only - they are never shown to candidates as facts.
+# No official weightage is encoded here: coverage analytics reports actual question distribution only.
+# Adding a subject (e.g. DT) = add a block here + its documents to data/metadata/sources.json.
+
+subjects:
+  IDT:
+    name: Indirect Tax Laws (CA Final Paper 5)
+    chapters:
+      Supply under GST:
+        topics:
+          Meaning and scope of supply: [section 7, scope of supply, consideration, course or furtherance of business]
+          Activities treated as supply without consideration: [Schedule I, related persons, distinct persons, without consideration]
+          Activities neither goods nor services: [Schedule III, negative list, neither supply of goods nor services]
+          Composite and mixed supply: [composite supply, mixed supply, principal supply, naturally bundled, section 8]
+      Time of Supply:
+        topics:
+          Time of supply of goods: [section 12, time of supply of goods, date of issue of invoice, receipt of payment]
+          Time of supply of services: [section 13, time of supply of services, invoice within prescribed period]
+          Reverse charge time of supply: [reverse charge, date of payment, date of receipt of goods, 60 days]
+          Change in rate of tax: [section 14, change in rate of tax, before change, after change]
+      Value of Supply:
+        topics:
+          Transaction value and inclusions: [section 15, transaction value, price actually paid, inclusions, subsidies]
+          Discounts: [discount, post-supply discount, section 15(3), credit note]
+          Valuation rules for related persons: [related persons, valuation rules, open market value, Rule 28]
+      Place of Supply:
+        topics:
+          Place of supply of goods: [section 10, place of supply of goods, movement of goods, bill to ship to]
+          Place of supply of services domestic: [section 12 IGST, place of supply of services, location of recipient]
+          Place of supply in cross-border services: [section 13 IGST, export of services, location of supplier, OIDAR]
+          Intra-State vs inter-State supply: [inter-State supply, intra-State supply, section 7 IGST, section 8 IGST]
+      Input Tax Credit:
+        topics:
+          Eligibility and conditions for taking ITC: [section 16, eligibility, conditions for taking input tax credit, possession of tax invoice, receipt of goods or services]
+          Blocked credits: [section 17(5), blocked credit, motor vehicles, food and beverages, works contract, construction of immovable property]
+          Apportionment and reversal of credit: [section 17(1), section 17(2), apportionment, exempt supplies, Rule 42, Rule 43, common credit]
+          Time limit for availing ITC: [section 16(4), time limit, annual return, 30th November]
+          Reversal for non-payment to supplier: [180 days, payment to supplier, reversal, second proviso section 16(2)]
+          ITC in special circumstances: [section 18, new registration, composition scheme, change in constitution]
+      Exemptions from GST: {topics: {}}
+      Charge of GST: {topics: {}}
+      Registration: {topics: {}}
+      Tax Invoice, Credit and Debit Notes: {topics: {}}
+      Payment of Tax: {topics: {}}
+      Returns: {topics: {}}
+      Import and Export under GST: {topics: {}}
+      Refunds: {topics: {}}
+      Job Work: {topics: {}}
+      Electronic Commerce Transactions: {topics: {}}
+      E-way Bill: {topics: {}}
+      Demands and Recovery: {topics: {}}
+      Offences and Penalties: {topics: {}}
+      Appeals and Revision: {topics: {}}
+      Advance Ruling: {topics: {}}
